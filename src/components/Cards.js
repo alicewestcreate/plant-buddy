@@ -23,9 +23,9 @@ export default function Cards() {
         </Typography>
         </CardContent>
         <CardActions>
-//         <Button sx={{ m: 2}} color='primary' variant='contained' size="small">Low light</Button>
-//         <Button sx={{ m: 2}} color='warning' variant='contained' size="small">Direct sunlight</Button>
-//       </CardActions>
-//     </Card>
+    <Button sx={{ m: 2}} color='primary' variant='contained' size="small">Low light</Button>
+    <Button sx={{ m: 2}} color='warning' variant='contained' size="small">Direct sunlight</Button>
+    </CardActions>
+    </Card>
     );
 }
