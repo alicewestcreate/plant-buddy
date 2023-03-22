@@ -1,7 +1,8 @@
-import React, { Component } from "react";// to shw and hide componenets
+import React, { Component } from 'react'
+
 import Typography from '@mui/material/Typography';
 
-class Home extends Component {
+class TestPage extends Component {
     constructor() {
         super();
         this.state = {
@@ -13,7 +14,7 @@ class Home extends Component {
         return (
             <>
                 <Typography variant="h1" component="div" sx={{ flexGrow: 1 }}>
-                    Find Your Perfect Plant Match
+                    Test Page
                 </Typography>
             </>
         )
@@ -21,4 +22,4 @@ class Home extends Component {
     }
 }
 
-export default Home;
+export default TestPage;
