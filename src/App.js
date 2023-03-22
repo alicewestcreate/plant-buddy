@@ -39,25 +39,27 @@ class App extends Component {
       case "showHideTestPage":
         this.setState({ showHideTestPage: !this.state.showHideTestPage });
         break;
-      // case "hideButton":
-      //   this.setState({ hiseButton: !this.state.hideButton })
+      case "showHideButton":
+        this.setState({ showHideButton: !this.state.showHideButton })
+        break;
       default:
         break;
     }
   }
 
   render() {
-    const { showHideHome, showHideTestPage } = this.state;
+    const { showHideHome, showHideTestPage, showHideButton } = this.state;
     return (
       // wrap everything in theme provider 
       <ThemeProvider theme={theme}>
-        {/* navbar and home page are hidden when button is clicked */}
+        {/* navbar, home and button all show */}
         {!showHideHome && <Navbar />}
         {!showHideHome && <Home />}
-        {/* {!hideButton && ( */}
-        <Button variant="contained" color="primary" onClick={() => this.hideComponent("showHideHome") & this.hideComponent("showHideTestPage")} >
-          Click Me!
-        </Button>
+        {!showHideButton && (
+          // navbar, home page and button are hidden when button is clicked
+          <Button variant="contained" color="primary" onClick={() => this.hideComponent("showHideHome") & this.hideComponent("showHideTestPage") & this.hideComponent("showHideButton")} >
+            Click Me!
+          </Button>)}
         {showHideTestPage && <TestPage />}
       </ThemeProvider >
     )
