@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
+import Cards from './components/Cards';
 import { createTheme, ThemeProvider } from '@mui/material';
 import { purple } from '@mui/material/colors';
 import Test from "./sections/Test"
