@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Home from './components/Home';
-import Navbar from './components/Navbar';
-import MyCards from './components/Cards';
+import Navbar from './components/Navbar/Navbar';
+import MyCards from './components/Card/Cards';
 import { createTheme, ThemeProvider } from '@mui/material';
 import { purple } from '@mui/material/colors';
 import Test from "./sections/Test"
