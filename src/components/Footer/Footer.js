@@ -5,6 +5,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 
+const pages = ['About Us', 'Contact Us'];
 
 function ResponsiveAppBar() {
     return (
