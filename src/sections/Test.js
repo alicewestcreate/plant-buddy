@@ -24,11 +24,14 @@ const Test = () => {
 
 
 
-
+let count = 0
   //////////////////////////////////////////////////////////////////////
 // Filter results, pass through the data, the property that is being targeted and the value we're filtering against.
     const filterResults = (data, property, value) => {
         console.log(property);
+        count = count + 1
+        console.log(count);
+    
       function filterByProperty(plant) {
         // If the plant property is equal to value in question, return ture.
         if (plant[property] === value) {
@@ -54,12 +57,11 @@ const Test = () => {
 // Call the function to get filtered results.
 
 const compareResults = (allFilteredResults, filteredResultsArray) => {
-    console.log("filteredd",filteredResultsArray);
-    console.log("all results",allFilteredResults);
+    console.log("results to filter",filteredResultsArray);
+    console.log("compare against",allFilteredResults);
 
       const matches = allFilteredResults.filter((item) => {
-        console.log("item",item);
-        return filteredResultsArray.includes(item)
+        filteredResultsArray.includes(item)
       });
       console.log("matches",matches);
       matches.forEach(match => {
@@ -85,6 +87,7 @@ questions.forEach((question, index) => {
     if (allFilteredResults === null) {
         allFilteredResults = [];
         allFilteredResults.push(filteredResultsReturned);
+        console.log("1",allFilteredResults);
       } else {
         compareResults(allFilteredResults, filteredResultsReturned);
       }
