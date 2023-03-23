@@ -18,7 +18,7 @@ function ResponsiveAppBar() {
               {pages.map((page) => (
                   <Button
                     key={page}
-                    sx={{ my: 2, color: 'white', display: 'block' }}
+                    sx={{ my: 2, color: 'white', display: 'block', mx: 1 }}
                   >
                     {page}
                   </Button>
