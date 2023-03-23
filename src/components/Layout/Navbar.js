@@ -18,7 +18,7 @@ class Navbar extends Component {
     render() {
 
         return (
-            <Box sx={{ flexGrow: 1 }}>
+            <Box>
                 <AppBar position="static">
                     <Toolbar>
                         <IconButton

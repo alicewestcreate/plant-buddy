@@ -24,87 +24,87 @@ const Test = () => {
 
 
 
-let count = 0
+  let count = 0
   //////////////////////////////////////////////////////////////////////
-// Filter results, pass through the data, the property that is being targeted and the value we're filtering against.
-    const filterResults = (data, property, value) => {
-        console.log(property);
-        count = count + 1
-        console.log(count);
-    
-      function filterByProperty(plant) {
-        // If the plant property is equal to value in question, return ture.
-        if (plant[property] === value) {
+  // Filter results, pass through the data, the property that is being targeted and the value we're filtering against.
+  const filterResults = (data, property, value) => {
+    console.log(property);
+    count = count + 1
+    console.log(count);
+
+    function filterByProperty(plant) {
+      // If the plant property is equal to value in question, return ture.
+      if (plant[property] === value) {
         //   console.log(plant);
-          return true;
-        } else {
-          return false;
-        }
+        return true;
+      } else {
+        return false;
       }
-      // All true returns are stored into this variable.
-      let filteredResultsArray = data.filter(filterByProperty);
+    }
+    // All true returns are stored into this variable.
+    let filteredResultsArray = data.filter(filterByProperty);
 
-      // For each true return, add a new properity called priority points, set the value to one.
-      filteredResultsArray.forEach((result) => {
-        result["Priority Points"] = 1;
-      });
-      console.log(property, filteredResultsArray);
-      return filteredResultsArray;
-    };
-
-
-//////////////////////////////////////////////////////////////////////
-// Call the function to get filtered results.
-
-const compareResults = (allFilteredResults, filteredResultsArray) => {
-    console.log("results to filter",filteredResultsArray);
-    console.log("compare against",allFilteredResults);
-
-      const matches = allFilteredResults.filter((item) => {
-        filteredResultsArray.includes(item)
-      });
-      console.log("matches",matches);
-      matches.forEach(match => {
-        console.log("MARCH", match);
-        
-      });
+    // For each true return, add a new properity called priority points, set the value to one.
+    filteredResultsArray.forEach((result) => {
+      result["Priority Points"] = 1;
+    });
+    console.log(property, filteredResultsArray);
+    return filteredResultsArray;
+  };
 
 
+  //////////////////////////////////////////////////////////////////////
+  // Call the function to get filtered results.
 
-    };
+  const compareResults = (allFilteredResults, filteredResultsArray) => {
+    console.log("results to filter", filteredResultsArray);
+    console.log("compare against", allFilteredResults);
+
+    const matches = allFilteredResults.filter((item) => {
+      filteredResultsArray.includes(item)
+    });
+    console.log("matches", matches);
+    matches.forEach(match => {
+      console.log("MARCH", match);
+
+    });
 
 
-// Variables that simulate the questions.
-    let questions = ["Do you kill plants", "Do you water plants"]
-    let allFilteredResults = null;
-  
-questions.forEach((question, index) => {
+
+  };
+
+
+  // Variables that simulate the questions.
+  let questions = ["Do you kill plants", "Do you water plants"]
+  let allFilteredResults = null;
+
+  questions.forEach((question, index) => {
     console.log(question);
     let property = ["Appeal", "Avaibility"];
-    let value = ["Robustness", "Seasonal" ];
+    let value = ["Robustness", "Seasonal"];
     let filteredResultsReturned = filterResults(data, property[index], value[index]);
 
     if (allFilteredResults === null) {
-        allFilteredResults = [];
-        allFilteredResults.push(filteredResultsReturned);
-        console.log("1",allFilteredResults);
-      } else {
-        compareResults(allFilteredResults, filteredResultsReturned);
-      }
+      allFilteredResults = [];
+      allFilteredResults.push(filteredResultsReturned);
+      console.log("1", allFilteredResults);
+    } else {
+      compareResults(allFilteredResults, filteredResultsReturned);
+    }
 
 
   });
-  
 
 
-  
-  
- 
+
+
+
+
 
 
   return (
     <Button variant="contained" color="primary" onClick={fetchData}>
-      Start Quiz
+      Test
     </Button>
   );
 };
