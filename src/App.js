@@ -3,6 +3,7 @@ import Home from './components/Home';
 import Navbar from './components/Navbar';
 import { createTheme, ThemeProvider } from '@mui/material';
 import { purple } from '@mui/material/colors';
+import Test from "./sections/Test"
 import { Button } from "@mui/material";
 import TestPage from './components/TestPage';
 
@@ -61,6 +62,7 @@ class App extends Component {
             Click Me!
           </Button>)}
         {showHideTestPage && <TestPage />}
+        <Test/>
       </ThemeProvider >
     )
   }
