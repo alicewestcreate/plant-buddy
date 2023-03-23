@@ -14,8 +14,8 @@ function ResponsiveAppBar() {
         <AppBar position="fixed" sx={{ top: 'auto', bottom: 0 }}>
           <Container maxWidth="xl">
             <Toolbar disableGutters>
-              <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                {pages.map((page) => (
+            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'center' }}>
+              {pages.map((page) => (
                   <Button
                     key={page}
                     sx={{ my: 2, color: 'white', display: 'block' }}
