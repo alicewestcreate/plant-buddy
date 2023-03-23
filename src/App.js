@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Home from './components/Home';
 import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
 import MyCards from './components/Card/Cards';
 import { createTheme, ThemeProvider } from '@mui/material';
 import { purple } from '@mui/material/colors';
@@ -66,6 +67,7 @@ class App extends Component {
         {showHideTestPage && <TestPage />}
         <Test/>
         <MyCards/>
+        <Footer/>
       </ThemeProvider >
     )
   }
