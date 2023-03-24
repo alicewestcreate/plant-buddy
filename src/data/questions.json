@@ -1,0 +1,18 @@
+[
+    {
+        "question": "Are you a Flower of Foliage kinder of planter?",
+        "Choices" : {
+            "ButtonLeft": "Flower",
+            "ButtonRight": "Foliage"
+        },
+        "Properties": {
+            "PropLeft": "Appeal",
+            "PropRight": "Appeal"
+        }, 
+        "Values": {
+            "ValLeft": "Flower",
+            "ValRight": "Foliage"
+        }
+        
+    }
+]

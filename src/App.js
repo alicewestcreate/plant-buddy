@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import Home from './components/Home';
 import Navbar from './components/Navbar/Navbar';
 import MyCards from './components/Card/Cards';
+import PlantCards from './components/Card/ResultsCard';
+import QuestionCard from './components/Card/QuestionCards';
+
 import { createTheme, ThemeProvider } from '@mui/material';
 import { purple } from '@mui/material/colors';
-import Test from "./sections/Test"
 import { Button } from "@mui/material";
 import TestPage from './components/TestPage';
 
@@ -64,8 +66,9 @@ class App extends Component {
             Click Me!
           </Button>)}
         {showHideTestPage && <TestPage />}
-        <Test/>
         <MyCards/>
+        <PlantCards/>
+        <QuestionCard/>
       </ThemeProvider >
     )
   }
