@@ -12,7 +12,11 @@ function About() {
       padding: '0 1rem',
     };
 
-
+    const textStyle = {
+        lineHeight: '1.5',
+        fontSize: '1.1rem',
+        maxWidth: '800px',
+      };
 
 
     return (
@@ -53,3 +57,5 @@ function About() {
     </div>
   );
 }
+
+export default About;
