@@ -1,7 +1,6 @@
-import React, { Component } from "react";// to shw and hide componenets
+import React from "react";
 import Typography from '@mui/material/Typography';
 import Layout from "../Layout/Layout";
-import Test from "../../sections/Test";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
@@ -17,11 +16,9 @@ const Home = () => {
             <Button variant="contained" color="primary" onClick={() => navigate("/cards")} >
                 Start Quiz
             </Button>
-            <Test />
         </Layout>
     )
 
 }
-
 
 export default Home;

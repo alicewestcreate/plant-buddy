@@ -1,10 +1,9 @@
 import React from 'react';
 import { Route, Routes } from "react-router-dom";
-import Home from './components/sections/Home';
-import Cards from './components/sections/Cards';
+import Home from './components/pages/Home';
+import Cards from './components/pages/Cards';
 import { ThemeProvider } from '@mui/material';
 import theme from "./theme";
-import Test from "./sections/Test"
 
 export const App = () => {
   return (
