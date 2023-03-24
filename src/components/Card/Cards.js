@@ -7,6 +7,9 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
+// Import the image
+import kitchenPlant from '../Images/kitchen-plant.jpg';
+
 export default function Cards() {
     return (
         <Box
@@ -20,8 +23,9 @@ export default function Cards() {
             <Card sx={{ maxWidth: 345 }}>
                 <CardMedia
                     sx={{ height: 140 }}
-                    image="/static/images/cards/contemplative-reptile.jpg"
-                    title="green iguana"
+                    // Assign the imported image to the image prop
+                    image={kitchenPlant}
+                    title="Kitchen Plant"
                 />
                 <CardContent>
                     <Typography sx={{ m: 2 }} color="primary" variant="contained" gutterBottom="h5" component="div">
