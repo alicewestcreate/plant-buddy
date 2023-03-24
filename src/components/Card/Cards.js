@@ -12,6 +12,7 @@ import kitchenPlant from '../Images/kitchen-plant.jpg';
 
 export default function Cards() {
     return (
+        // Create a flex container to center the card
         <Box
             sx={{
                 display: 'flex',
