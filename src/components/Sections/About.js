@@ -6,12 +6,14 @@ import Slide from '@mui/material/Slide';
 
 
 function About() {
+    // Style object for the container div
     const containerStyle = {
       display: 'flex',
       justifyContent: 'center',
       padding: '0 1rem',
     };
 
+    // Style object for the text content
     const textStyle = {
         lineHeight: '1.5',
         fontSize: '1.1rem',
