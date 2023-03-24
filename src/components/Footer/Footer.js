@@ -9,38 +9,38 @@ import { Link } from 'react-router-dom';
 const pages = ['About', 'Contact'];
 
 function ResponsiveAppBar() {
-  return (
+return (
     <>
-      <Box sx={{ paddingBottom: '64px' }}></Box>
-      <AppBar position="fixed" sx={{ top: 'auto', bottom: 0 }}>
+    <Box sx={{ paddingBottom: '64px' }}></Box>
+    <AppBar position="fixed" sx={{ top: 'auto', bottom: 0 }}>
         <Container maxWidth="xl">
-          <Toolbar disableGutters>
+        <Toolbar disableGutters>
             <Box
-              sx={{
+            sx={{
                 flexGrow: 1,
                 display: { xs: 'none', md: 'flex' },
                 justifyContent: 'center',
-              }}
+            }}
             >
-              {pages.map((page) => (
+            {pages.map((page) => (
                 <Link
-                  key={page}
-                  to={`/${page.toLowerCase()}`}
-                  style={{ textDecoration: 'none', color: 'inherit' }}
+                key={page}
+                to={`/${page.toLowerCase()}`}
+                style={{ textDecoration: 'none', color: 'inherit' }}
                 >
-                  <Button
+                <Button
                     sx={{ my: 2, color: 'white', display: 'block', mx: 1 }}
-                  >
+                >
                     {page}
-                  </Button>
+                </Button>
                 </Link>
-              ))}
+            ))}
             </Box>
-          </Toolbar>
+        </Toolbar>
         </Container>
-      </AppBar>
+    </AppBar>
     </>
-  );
+);
 }
 
 export default ResponsiveAppBar;
