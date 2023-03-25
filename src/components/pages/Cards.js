@@ -11,6 +11,10 @@ import Box from '@mui/material/Box';
 // Import the image
 import kitchenPlant from '../Images/kitchen-plant.jpg';
 
+// Import styled components
+import { CardContainer, StyledCard, StyledCardMedia, SunlightTypography, StyledButton } from './Card.styled';
+
+
 export default function Cards() {
     return (
         <Layout>
