@@ -1,0 +1,30 @@
+@keyframes fade {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.splashScreen {
+    color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: whitesmoke;
+    z-index: 9999;
+    animation: fade 1s ease-in-out forwards;
+    pointer-events: none;
+
+}
+
+@media (prefers-color-scheme: dark) {
+    .splashScreen {
+        color: white;
+        background-color: black;
+    }
+}

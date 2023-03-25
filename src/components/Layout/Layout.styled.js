@@ -9,9 +9,10 @@ export const Main = styled("main")({
     display: "flex",
     flexDirection: "column",
     minHeight: "100vh",
-    background: `url(${backgroundImage})`,
+    background: `linear-gradient(180deg, rgba(0,0,0,0.6) 57%, rgba(255,255,255,0) 100%), url(${backgroundImage})`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
+
 });
 
 
