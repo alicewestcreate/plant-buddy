@@ -1,5 +1,3 @@
-import { Toolbar } from '@mui/material';
-import { green } from '@mui/material/colors';
 import { styled } from '@mui/material/styles';
 import backgroundImage from '../Images/heroImage2.jpg';
 

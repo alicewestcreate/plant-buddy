@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Routes } from "react-router-dom";
 import Home from './components/pages/Home';
 import Cards from './components/pages/Cards';
+import Matches from './components/pages/Matches';
 import { Paper } from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { getDesignTokens } from './theme';
@@ -32,6 +33,7 @@ export function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/cards" element={<Cards />} />
+            <Route path='/matches' element={<Matches />} />
           </Routes>
         </Paper>
       </ThemeProvider>
