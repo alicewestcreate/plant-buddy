@@ -24,12 +24,12 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
             '& + .MuiSwitch-track': {
                 // color of track behind toddle button
                 opacity: 1,
-                backgroundColor: theme.palette.mode === 'dark' ? yellow[200] : blue[900],
+                backgroundColor: theme.palette.mode === 'dark' ? blue[900] : yellow[200],
             },
         },
     },
     '& .MuiSwitch-thumb': {
-        backgroundColor: theme.palette.mode === 'dark' ? yellow[700] : blue[500],
+        backgroundColor: theme.palette.mode === 'dark' ? blue[500] : yellow[700],
         width: 32,
         height: 32,
         '&:before': {
@@ -48,7 +48,7 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     },
     '& .MuiSwitch-track': {
         opacity: 1,
-        backgroundColor: theme.palette.mode === 'dark' ? yellow[100] : '#aab4be',
+        backgroundColor: theme.palette.mode === 'dark' ? '#aab4be' : yellow[100],
         borderRadius: 20 / 2,
     },
 }));
