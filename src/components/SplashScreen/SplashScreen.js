@@ -1,9 +1,13 @@
+import { Typography } from '@mui/material';
 import React from 'react';
 import './SplashScreen.css';
 
+
 const SplashScreen = () => {
     return (
-        <div className='splashScreen'>SplashScreen</div>
+        <div className='splashScreenContainer'>
+            <Typography variant="h6" component="div" className='splashScreen'>Plant Buddy</Typography>
+        </div>
     )
 }
 

@@ -1,5 +1,5 @@
 import { createTheme } from '@mui/material';
-import { amber, grey, deepOrange, lightGreen } from '@mui/material/colors';
+import { grey } from '@mui/material/colors';
 
 // overriding material ui's default themes 
 const theme = createTheme({
@@ -17,10 +17,11 @@ export const getDesignTokens = (mode) => ({
             ? {
                 // palette values for light mode
                 primary: {
-                    main: deepOrange[300],
+                    main: grey[100],
                 },
                 text: {
-                    primary: grey[900],
+                    primary: grey[100],
+                    secondary: grey[900]
                 },
             }
             : {

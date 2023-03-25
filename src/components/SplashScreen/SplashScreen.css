@@ -8,8 +8,16 @@
     }
 }
 
+
+.splashScreenContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .splashScreen {
     color: black;
+    font-size: 4rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -17,10 +25,14 @@
     height: 100vh;
     background-color: whitesmoke;
     z-index: 9999;
-    animation: fade 1s ease-in-out forwards;
+    animation: fade 3s ease-in-out forwards;
     pointer-events: none;
 
 }
+
+
+
+
 
 @media (prefers-color-scheme: dark) {
     .splashScreen {
