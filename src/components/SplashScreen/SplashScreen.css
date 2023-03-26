@@ -13,6 +13,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .splashScreen {
@@ -23,20 +24,23 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: whitesmoke;
+    background: url(../Images/heroImage2.jpg) no-repeat center center fixed;
+    background-size: cover;
     z-index: 9999;
     animation: fade 3s ease-in-out forwards;
     pointer-events: none;
 
 }
 
-
-
-
+.splashScreenContainer h6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 @media (prefers-color-scheme: dark) {
     .splashScreen {
-        color: white;
+        color: lightgreen;
         background-color: black;
     }
 }

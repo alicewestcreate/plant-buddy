@@ -22,6 +22,7 @@ const Navbar = () => {
                         Plant Buddy
                     </Typography>
                     <Button color="inherit" onClick={() => navigate("/matches")}>Your Matches</Button>
+                    {/* when toggle switched will chnage mode */}
                     <CustomizedSwitches checked={mode === "dark"} onChange={toggleColorMode} />
                 </Toolbar>
             </AppBar>

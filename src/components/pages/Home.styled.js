@@ -7,4 +7,3 @@ export const MainHome = styled("h1")({
     alignItems: "center",
     padding: "3rem"
 })
-
