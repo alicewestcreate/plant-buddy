@@ -7,7 +7,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import cactus from "../images/cactus.jpeg";
-import questions from "../questions.json";
+import questions from "../../data/questions.json";
 
 export default function QuestionCard() {
   const q = questions;
@@ -17,6 +17,7 @@ export default function QuestionCard() {
   };
 
   const handleClick = (e) => {
+    
     const thisButton = e.target;
     const property = thisButton.getAttribute("data-property");
     const value = thisButton.getAttribute("data-value");
