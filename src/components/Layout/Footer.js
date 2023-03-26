@@ -12,8 +12,8 @@ const pages = ['About', 'Contact'];
 function ResponsiveAppBar() {
     return (
         <>
-            {/* Add padding to the bottom of the page */}
-            <Box sx={{ paddingBottom: '64px' }}></Box>
+            {/* Add padding to the bottom of the page
+            <Box sx={{ paddingBottom: '64px' }}></Box> */}
 
             {/* AppBar component with fixed positioning at the bottom of the page */}
             <AppBar position="fixed" sx={{ top: 'auto', bottom: 0 }}>
