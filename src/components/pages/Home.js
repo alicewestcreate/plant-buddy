@@ -12,16 +12,16 @@ const Home = () => {
     return (
         <Layout>
             <MainHome >
-
                 <Typography variant="h1" component="div" sx={{ flexGrow: 1 }}>
                     Find Your Perfect Plant Match
                 </Typography>
-                <Button variant="contained" color="primary" onClick={() => navigate("/cards")} sx={{ fontSize: 18 }} >
+                <Button variant="contained" color="primary" onClick={() => navigate("/cards")} sx={{
+                    fontSize: 18,
+                    marginTop: '2rem'
+                }} >
                     Start Quiz
                 </Button>
-
             </MainHome>
-
         </Layout>
     )
 

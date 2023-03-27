@@ -1,14 +1,20 @@
 import React from 'react';
 import { Typography } from '@mui/material';
-import Layout from '../Layout/Layout';
+import LayoutTwo from '../Layout/LayoutTwo';
+import { MainHome } from './Matches.styled';
 
 const Matches = () => {
     return (
-        <Layout>
-            <Typography variant="h1" component="div" sx={{ flexGrow: 1 }}>
-                Your Saved Matches
-            </Typography>
-        </Layout>
+        <LayoutTwo>
+            <MainHome>
+
+                <Typography variant="h1" component="div" sx={{ flexGrow: 1 }}>
+                    Your Saved Matches
+                </Typography>
+
+            </MainHome>
+
+        </LayoutTwo>
 
     )
 }
