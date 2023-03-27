@@ -1,0 +1,97 @@
+[
+    {   
+        "question": "Are you a plant whisperer or a plant killer?",
+        "imageURL": "kitchen-plant.jpg",
+        "filter": {
+            "left": {
+                "btnTxt": "I'm a Whisperer",
+                "property": "Growth",
+                "searchVal": "Fast" 
+                
+            },
+            "right": {
+                "btnTxt": "Definitly a Killer",
+                "property": "Appeal",
+                "searchVal": "Robustness" 
+                
+            }
+        }
+    },
+
+    {
+        "question": "Are you a Flower of Foliage kind of planter?",
+        "imageURL": "kitchen-plant.jpg",
+        "filter": {
+            "left": {
+                "btnTxt": "Flower",
+                "property": "Appeal",
+                "searchVal": "Flower" 
+                
+            },
+            "right": {
+                "btnTxt": "Foliage",
+                "property": "Appeal",
+                "searchVal": "Foliage" 
+                
+            }
+        }
+    }, 
+
+    {
+        "question": "Will you remember to give them a drink?",
+        "imageURL": "kitchen-plant.jpg",
+        "filter": {
+            "left": {
+                "btnTxt": "If they're lucky",
+                "property": "Watering",
+                "searchVal": "Must dry between watering & Water only when dry" 
+                
+            },
+            "right": {
+                "btnTxt": "Like Clockwork",
+                "property": "Watering",
+                "searchVal": "Keep moist between watering & Must not dry between watering" 
+            }
+        }
+    }, 
+
+    {
+        "question": "Will their new surroundings be for Sun Worshippers or Shade Seekers?",
+        "imageURL": "kitchen-plant.jpg",
+        "filter": {
+            "left": {
+                "btnTxt": "Sun Worshippers",
+                "property": "Categories",
+                "searchVal": "Palm" 
+                
+            },
+            "right": {
+                "btnTxt": "Shade Seekers",
+                "property": "Categories",
+                "searchVal": "Hanging" 
+                
+            }
+        }
+    },
+
+    {
+        "question": "Are you seeking for bit of a conversation starter or simply a new addition to the decor?",
+        "imageURL": "kitchen-plant.jpg",
+        "filter": {
+            "left": {
+                "btnTxt": "Conversation Starter",
+                "property": "Family",
+                "searchVal": "Bromeliaceae" 
+                
+            },
+            "right": {
+                "btnTxt": "New Addition",
+                "property": "Family",
+                "searchVal": "Strelitziaceae" 
+                
+            }
+        }
+    }
+   
+    
+]
