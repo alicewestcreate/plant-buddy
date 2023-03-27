@@ -9,6 +9,7 @@ function About() {
         display: 'flex',
         justifyContent: 'center',
         padding: '0 1rem',
+        marginTop: '4rem',
     };
 
     // Style object for the text content
