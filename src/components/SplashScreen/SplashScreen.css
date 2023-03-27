@@ -1,0 +1,46 @@
+@keyframes fade {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+
+.splashScreenContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.splashScreen {
+    color: black;
+    font-size: 4rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url(../Images/heroImage2.jpg) no-repeat;
+    background-size: cover;
+    z-index: 9999;
+    animation: fade 3s ease-in-out forwards;
+    pointer-events: none;
+
+}
+
+.splashScreenContainer h6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (prefers-color-scheme: dark) {
+    .splashScreen {
+        color: lightgreen;
+        background-color: black;
+    }
+}
