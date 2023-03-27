@@ -1,5 +1,5 @@
 import { styled } from '@mui/material/styles';
-import backgroundImage from '../Images/flowers.jpg';
+import backgroundImage from '../Images/plantsWhiteScreen.jpg';
 
 // can use props to change styles aka color - https://mui.com/system/styled/
 
@@ -10,7 +10,6 @@ export const Main = styled("main")({
     background: `url(${backgroundImage})`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
-
 });
 
 

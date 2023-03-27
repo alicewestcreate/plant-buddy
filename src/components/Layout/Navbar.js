@@ -21,7 +21,7 @@ const Navbar = () => {
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1, cursor: 'pointer' }} onClick={() => navigate("/")}>
                         Plant Buddy
                     </Typography>
-                    <Button color="inherit" onClick={() => navigate("/matches")}>Your Matches</Button>
+                    <Button color="inherit" sx={{ boxShadow: '0 0 0 1px #F34079', marginRight: '2rem', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)' }} onClick={() => navigate("/matches")}>Your Matches</Button>
                     {/* when toggle switched will chnage mode */}
                     <CustomizedSwitches checked={mode === "dark"} onChange={toggleColorMode} />
                 </Toolbar>

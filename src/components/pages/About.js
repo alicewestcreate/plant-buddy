@@ -2,7 +2,7 @@ import React from 'react';
 import Typography from '@mui/material/Typography';
 import Fade from '@mui/material/Fade';
 import Slide from '@mui/material/Slide';
-import Layout from '../Layout/Layout';
+import AboutLayout from '../Layout/AboutLayout';
 
 function About() {
     // Style object for the container div
@@ -18,11 +18,12 @@ function About() {
         lineHeight: '1.5',
         fontSize: '1.1rem',
         maxWidth: '800px',
+        backdropFilter: 'blur(10px)',
     };
 
 
     return (
-        <Layout>
+        <AboutLayout>
             <div style={containerStyle}>
                 <div style={textStyle}>
                     <Fade in={true} timeout={1000}>
@@ -58,7 +59,7 @@ function About() {
                     </Slide>
                 </div>
             </div>
-        </Layout>
+        </AboutLayout>
     );
 }
 

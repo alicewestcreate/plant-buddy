@@ -46,7 +46,8 @@ export const getDesignTokens = (mode) => ({
                     paper: '#00352F',
                 },
                 text: {
-                    primary: grey[900]
+                    primary: grey[900],
+                    secondary: '#E7E8EA'
                 },
             }),
     },

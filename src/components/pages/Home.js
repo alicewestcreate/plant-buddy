@@ -13,7 +13,6 @@ const Home = () => {
     const navigate = useNavigate()
 
     return (
-
         <>
             <Navbar />
             <Layout>
@@ -23,7 +22,6 @@ const Home = () => {
                     </Typography>
                     <button className="button-75" role={'button'} variant="contained" color="primary" onClick={() => navigate("/quiz")} sx={{
                         fontSize: 18,
-                        alignItem: 'center',
                     }} >
                         Start Quiz
                     </button>

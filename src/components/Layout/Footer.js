@@ -28,7 +28,7 @@ function Footer() {
                                 About
                             </Typography>
                             <Typography variant="h6" component="div" sx={{ padding: '0 2rem', cursor: 'pointer' }} onClick={() => navigate("/contact")}>
-                                contact
+                                Contact
                             </Typography>
                         </Box>
                     </Toolbar>
