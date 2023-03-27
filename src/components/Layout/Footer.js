@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useNavigate } from "react-router-dom";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -7,9 +8,12 @@ import Container from '@mui/material/Container';
 import { Link } from 'react-router-dom';
 
 // Define an array of page names
-const pages = ['About', 'Contact'];
+const pages = ['about', 'contact'];
 
 function ResponsiveAppBar() {
+
+    const navigate = useNavigate();
+
     return (
         <>
             {/* Add padding to the bottom of the page */}
@@ -34,11 +38,11 @@ function ResponsiveAppBar() {
                             {pages.map((page) => (
                                 <Link
                                     key={page}
-                                    to={`/${page}`}
+                                    onClick={() => navigate(`/${page}`)}
                                     style={{ textDecoration: 'none', color: 'inherit' }}
                                 >
                                     <Button
-                                        sx={{ my: 2, color: 'white', display: 'block', mx: 1 }}
+                                        sx={{ my: 2, color: 'inherit', display: 'block', mx: 1 }}
                                     >
                                         {page}
                                     </Button>

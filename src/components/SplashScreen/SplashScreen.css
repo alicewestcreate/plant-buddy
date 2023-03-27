@@ -24,7 +24,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: url(../Images/heroImage2.jpg) no-repeat center center fixed;
+    background: url(../Images/heroImage2.jpg) no-repeat;
     background-size: cover;
     z-index: 9999;
     animation: fade 3s ease-in-out forwards;

@@ -6,7 +6,7 @@ import './SplashScreen.css';
 const SplashScreen = () => {
     return (
         <div className='splashScreenContainer'>
-            <Typography variant="h6" component="div" className='splashScreen'>Plant Buddy</Typography>
+            <Typography variant="h6" component="div" className='splashScreen'></Typography>
         </div>
     )
 }
