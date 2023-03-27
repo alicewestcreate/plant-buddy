@@ -16,7 +16,7 @@ const Navbar = () => {
 
     return (
         <Box>
-            <AppBar position="fixed">
+            <AppBar position="fixed" elevation={0} sx={{ backgroundColor: 'transparent', boxShadow: 'none' }}>
                 <Toolbar>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1, cursor: 'pointer' }} onClick={() => navigate("/")}>
                         Plant Buddy

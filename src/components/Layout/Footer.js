@@ -17,9 +17,8 @@ function Footer() {
             <Box sx={{ paddingBottom: '64px' }}></Box> */}
 
             {/* AppBar component with fixed positioning at the bottom of the page */}
-            <AppBar position="fixed" sx={{ top: 'auto', bottom: 0 }}>
+            <AppBar position="fixed" color='secondary' sx={{ top: 'auto', bottom: 0 }}>
                 <Container maxWidth="xl">
-
                     {/* Toolbar component to organize AppBar content */}
                     <Toolbar disableGutters>
 

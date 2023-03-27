@@ -1,11 +1,12 @@
 import React from "react";
 import Typography from '@mui/material/Typography';
 import Layout from "../Layout/Layout";
-import { Button } from "@mui/material";
+// import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { MainHome } from "./Home.styled";
 import Navbar from "../Layout/Navbar";
 import Footer from "../Layout/Footer";
+import './Button.css';
 
 const Home = () => {
 
@@ -17,15 +18,15 @@ const Home = () => {
             <Navbar />
             <Layout>
                 <MainHome >
-                    <Typography variant="h1" component="div" sx={{ flexGrow: 1 }}>
+                    <Typography variant="h1" component="div">
                         Find Your Perfect Plant Match
                     </Typography>
-                    <Button variant="contained" color="primary" onClick={() => navigate("/quiz")} sx={{
+                    <button className="button-75" role={'button'} variant="contained" color="primary" onClick={() => navigate("/quiz")} sx={{
                         fontSize: 18,
                         marginTop: '2rem'
                     }} >
                         Start Quiz
-                    </Button>
+                    </button>
                 </MainHome>
             </Layout>
             <Footer />

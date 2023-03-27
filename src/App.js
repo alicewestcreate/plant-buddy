@@ -1,7 +1,6 @@
 import React from 'react';
 import { Route, Routes } from "react-router-dom";
 import Home from './components/pages/Home';
-
 import Matches from './components/pages/Matches';
 import { Paper } from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
