@@ -23,7 +23,7 @@ const Home = () => {
                     </Typography>
                     <button className="button-75" role={'button'} variant="contained" color="primary" onClick={() => navigate("/quiz")} sx={{
                         fontSize: 18,
-                        marginTop: '2rem'
+                        alignItem: 'center',
                     }} >
                         Start Quiz
                     </button>
