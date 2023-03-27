@@ -2,7 +2,9 @@ import Layout from '../Layout/Layout';
 import CardWrapper from '../Carousel/MyCarousel';
 
 const Quiz = () => {
-    return (<Layout><CardWrapper/></Layout>) 
+    return (<Layout>
+        <CardWrapper />
+    </Layout>)
 
 }
 

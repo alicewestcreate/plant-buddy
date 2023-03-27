@@ -3,14 +3,13 @@ import { useNavigate } from "react-router-dom";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import Button from '@mui/material/Button';
+
 import Container from '@mui/material/Container';
-import { Link } from 'react-router-dom';
 
-// Define an array of page names
-const pages = ['about', 'contact'];
+import { Typography } from '@mui/material';
 
-function ResponsiveAppBar() {
+
+function Footer() {
 
     const navigate = useNavigate();
 
@@ -35,19 +34,12 @@ function ResponsiveAppBar() {
                             }}
                         >
                             {/* Iterate through the pages array to create a Button and Link for each page */}
-                            {pages.map((page) => (
-                                <Link
-                                    key={page}
-                                    onClick={() => navigate(`/${page}`)}
-                                    style={{ textDecoration: 'none', color: 'inherit' }}
-                                >
-                                    <Button
-                                        sx={{ my: 2, color: 'inherit', display: 'block', mx: 1 }}
-                                    >
-                                        {page}
-                                    </Button>
-                                </Link>
-                            ))}
+                            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} onClick={() => navigate("/about")}>
+                                About
+                            </Typography>
+                            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} onClick={() => navigate("/contact")}>
+                                contact
+                            </Typography>
                         </Box>
                     </Toolbar>
                 </Container>
@@ -56,4 +48,4 @@ function ResponsiveAppBar() {
     );
 }
 
-export default ResponsiveAppBar;
+export default Footer;
