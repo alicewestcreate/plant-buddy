@@ -5,5 +5,5 @@ export const MainHome = styled("h1")({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    padding: "1rem"
+    padding: "4rem 1rem"
 })

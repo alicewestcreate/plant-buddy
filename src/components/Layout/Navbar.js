@@ -18,7 +18,7 @@ const Navbar = () => {
         <Box>
             <AppBar position="fixed">
                 <Toolbar>
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} onClick={() => navigate("/")}>
+                    <Typography variant="h6" component="div" sx={{ flexGrow: 1, cursor: 'pointer' }} onClick={() => navigate("/")}>
                         Plant Buddy
                     </Typography>
                     <Button color="inherit" onClick={() => navigate("/matches")}>Your Matches</Button>

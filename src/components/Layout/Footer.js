@@ -1,11 +1,9 @@
 import * as React from 'react';
 import { useNavigate } from "react-router-dom";
 import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-
 import Container from '@mui/material/Container';
-
+import { Box } from './Footer.styled';
 import { Typography } from '@mui/material';
 
 
@@ -26,18 +24,11 @@ function Footer() {
                     <Toolbar disableGutters>
 
                         {/* Box component to center the page links */}
-                        <Box
-                            sx={{
-                                flexGrow: 1,
-                                display: { xs: 'none', md: 'flex' },
-                                justifyContent: 'center',
-                            }}
-                        >
-                            {/* Iterate through the pages array to create a Button and Link for each page */}
-                            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} onClick={() => navigate("/about")}>
+                        <Box>
+                            <Typography variant="h6" component="div" sx={{ padding: '0 2rem', cursor: 'pointer' }} onClick={() => navigate("/about")}>
                                 About
                             </Typography>
-                            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} onClick={() => navigate("/contact")}>
+                            <Typography variant="h6" component="div" sx={{ padding: '0 2rem', cursor: 'pointer' }} onClick={() => navigate("/contact")}>
                                 contact
                             </Typography>
                         </Box>
