@@ -1,11 +1,7 @@
 import {Card, CardActions, CardContent, CardMedia, Button, Typography, Box, Stack} from '@mui/material';
 
-// Import the image
-import kitchenPlant from '../../Images/kitchen-plant.jpg';
-
 // Import styled components
 import { CardContainer, StyledCard, StyledCardMedia, SunlightTypography, StyledButton } from './Cards.styled';
-
 
 export default function Cards() {
     return (
@@ -22,11 +18,11 @@ export default function Cards() {
             >
                 <CardContainer>
                     <StyledCard>
-                        {/* <StyledCardMedia
-                            // Assign the imported image to the image prop
-                            image={kitchenPlant}
-                            title="Kitchen Plant"
-                        /> */}
+                        <StyledCardMedia
+                            // Reference the image in the public folder
+                            image="/kitchen-plant.jpg"
+                            // title="Kitchen Plant"
+                        />
                         <CardContent>
                             <SunlightTypography>
                                 SUNLIGHT
@@ -47,6 +43,5 @@ export default function Cards() {
                 </CardContainer>
             </Box>
             </Stack>
-    
     );
 }
