@@ -17,19 +17,20 @@ export const getDesignTokens = (mode) => ({
             ? {
                 // palette values for light mode
                 primary: {
-                    main: '#E7E8EA'
+                    main: '#E7E8EA',
                 },
 
                 secondary: {
                     main: '#00352F'
                 },
+
                 background: {
                     default: '#E7E8EA',
                     paper: '#E7E8EA',
                 },
                 text: {
                     primary: grey[900],
-                    secondary: '#E7E8EA'
+                    secondary: grey[900],
                 },
             }
             : {
@@ -46,15 +47,40 @@ export const getDesignTokens = (mode) => ({
                     paper: '#00352F',
                 },
                 text: {
-                    primary: '#E7E8EA',
+                    primary: grey[900],
                     secondary: '#E7E8EA'
                 },
             }),
     },
     //font design
     typography: {
-        fontFamily: 'Delicious Handrawn',
-        fontWeight: 400
+        h1: {
+            fontFamily: 'Delicious Handrawn',
+            fontWeight: 400,
+        },
+        h2: {
+            fontFamily: 'Delicious Handrawn',
+            fontWeight: 400,
+        },
+        h3: {
+            fontFamily: 'Delicious Handrawn',
+            fontWeight: 400,
+        },
+        h4: {
+            fontFamily: 'Delicious Handrawn',
+            fontWeight: 400,
+        },
+        h5: {
+            fontFamily: 'Delicious Handrawn',
+            fontWeight: 400,
+        },
+        h6: {
+            fontFamily: 'Delicious Handrawn',
+            fontWeight: 400,
+        },
+        body1: {
+            fontFamily: "'Open Sans', sans- serif"
+        }
     },
 });
 

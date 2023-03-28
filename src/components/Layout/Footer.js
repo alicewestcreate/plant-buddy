@@ -24,10 +24,10 @@ function Footer() {
 
                         {/* Box component to center the page links */}
                         <Box>
-                            <Typography variant="h6" component="div" sx={{ padding: '0 2rem', cursor: 'pointer' }} onClick={() => navigate("/about")}>
+                            <Typography variant="h6" component="div" color='#E7E8EA' sx={{ padding: '0 2rem', cursor: 'pointer' }} onClick={() => navigate("/about")}>
                                 About
                             </Typography>
-                            <Typography variant="h6" component="div" sx={{ padding: '0 2rem', cursor: 'pointer' }} onClick={() => navigate("/contact")}>
+                            <Typography variant="h6" component="div" color='#E7E8EA' sx={{ padding: '0 2rem', cursor: 'pointer' }} onClick={() => navigate("/contact")}>
                                 Contact
                             </Typography>
                         </Box>
