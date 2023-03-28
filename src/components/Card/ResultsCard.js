@@ -1,8 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { Card, Grid, Typography, CardMedia, CardContent } from "@mui/material";
 import Matched from "./Matched";
-
-
 
 export default function ResultsCard({ plant }) {
   return (

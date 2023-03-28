@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Typography } from '@mui/material';
 import LayoutTwo from '../Layout/LayoutTwo';
 import { MainHome } from './Matches.styled';
 import fetchData from "../../utils/api";
+import { Grid, Typography } from "@mui/material";
+import ResultsCard from '../Card/ResultsCard';
 
 const Matches = () => {
 
@@ -20,18 +21,25 @@ const Matches = () => {
     }
     // when clicked look for items id in local storage and change its value to true. if unclicked it will be changed to false
     const matches = data.filter(p => {
+        // returns all items in local storage wich have the value of true
         return localStorage.getItem(p.id) === 'true'
     })
 
-    console.log(matches)
+    // using same logic as in resultsCards.js for quiz results rendering 
+    const savedArray = matches.map((perResult) =>
+        <ResultsCard plant={perResult} />
+    )
     return (
         <LayoutTwo>
             <MainHome>
                 <Typography variant="h1" component="div" sx={{ flexGrow: 1 }}>
                     Your Saved Matches
                 </Typography>
-            </MainHome>
-        </LayoutTwo>
+                <Grid container={true} spacing={4}>
+                    {savedArray}
+                </Grid>
+            </MainHome >
+        </LayoutTwo >
     )
 }
 
