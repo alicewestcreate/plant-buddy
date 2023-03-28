@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 // import { useNavigation } from
 
 import Box from "@mui/material/Box";
-import { Button } from "@mui/material";
+import './Button.css';
 
 import Layout from "../Layout/Layout";
 import Questions from "../Card/Questions";
@@ -63,16 +63,17 @@ const Quiz = () => {
           />
         )}
         {showResultsButton && (
-          <Button
-            variant="contained"
-            color="primary"
+
+
+          <button className="button-75" role={'button'} variant="contained"
             onClick={() => {
-              navigate("/results", { state: { allProperties, allValues}});
+              navigate("/results", { state: { allProperties, allValues } });
               sendPreferences();
             }}
           >
             Reveal Your Matches
-          </Button>
+          </button>
+
         )}
       </Box>
     </Layout>

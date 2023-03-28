@@ -1,3 +1,5 @@
+// Layout wrapper for pages included navbar, footer and background image.
+
 import Footer from './Footer';
 import { Main, MainContent } from './AboutLayout.styled';
 import Navbar from './Navbar';
