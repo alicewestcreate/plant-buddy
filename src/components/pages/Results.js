@@ -6,6 +6,7 @@ import { useLocation } from "react-router-dom";
 import fetchData from "../../utils/api";
 import ResultsCard from "../Card/ResultsCard";
 
+
 const Results = () => {
   const location = useLocation();
   const properties = location.state?.allProperties;
@@ -25,7 +26,7 @@ const Results = () => {
   }
 
   const matches = [];
-
+  
   data.forEach((entry) => {
     entry.priority = 0;
     entry.match = false;
@@ -67,7 +68,6 @@ const Results = () => {
   const resultsArray = slicedResults.map((perResult) => 
      <ResultsCard plant={perResult}/>
   )  
-
 
   return (
     <Layout>
