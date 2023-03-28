@@ -58,8 +58,4 @@ export const getDesignTokens = (mode) => ({
     },
 });
 
-
-
-
-
 export default theme;
