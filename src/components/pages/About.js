@@ -2,7 +2,8 @@ import React from 'react';
 import Typography from '@mui/material/Typography';
 import Fade from '@mui/material/Fade';
 import Slide from '@mui/material/Slide';
-import Layout from '../Layout/Layout';
+import AboutLayout from '../Layout/AboutLayout';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 function About() {
     // Style object for the container div
@@ -10,7 +11,7 @@ function About() {
         display: 'flex',
         justifyContent: 'center',
         padding: '0 1rem',
-        marginTop: '4rem',
+        marginTop: '4rem'
     };
 
     // Style object for the text content
@@ -18,11 +19,12 @@ function About() {
         lineHeight: '1.5',
         fontSize: '1.1rem',
         maxWidth: '800px',
+        backdropFilter: 'blur(10px)',
     };
 
 
     return (
-        <Layout>
+        <AboutLayout>
             <div style={containerStyle}>
                 <div style={textStyle}>
                     <Fade in={true} timeout={1000}>
@@ -31,34 +33,39 @@ function About() {
                         </Typography>
                     </Fade>
                     <Slide direction="up" in={true} timeout={1000}>
-                        <p>Welcome to Plant Buddy, the dating app for plant lovers!</p>
+                        <Typography variant='h6'>Welcome to Plant Buddy, the dating app for plant lovers!</Typography>
                     </Slide>
                     <Slide direction="up" in={true} timeout={1200}>
-                        <p>Our mission is to help you find the perfect plant companion to add some greenery to your life.</p>
+                        <Typography variant='h6'>Our mission is to help you find the perfect plant companion to add some greenery to your life.</Typography>
                     </Slide>
                     <Slide direction="up" in={true} timeout={1400}>
-                        <p>
+                        <Typography variant='h6'>
                             At Plant Buddy, we believe that plants are more than just decorations – they're living beings that can bring joy, calm, and a sense of connection to nature into your home. And just like people, plants have unique personalities and needs. That's why we've created an app that takes the guesswork out of finding your perfect plant match.
-                        </p>
+                        </Typography>
                     </Slide>
                     <Slide direction="up" in={true} timeout={1600}>
-                        <p>
+                        <Typography variant='h6'>
                             We know that finding the right plant can be a daunting task. But with Plant Buddy, you don't have to go it alone. That's why we've created a quiz that asks you a series of questions about your lifestyle and preferences to help you find your plant match.
-                        </p>
+                        </Typography>
                     </Slide>
                     <Slide direction="up" in={true} timeout={1800}>
-                        <p>
+                        <Typography variant='h6'>
                             By answering these questions, our app will generate a list of plant recommendations that match your unique preferences.
-                        </p>
+                        </Typography>
                     </Slide>
                     <Slide direction="up" in={true} timeout={2000}>
-                        <p>
+                        <Typography variant='h6'>
                             We believe that everyone can find joy and companionship in a plant. Let Plant Buddy help you find your perfect match today!
-                        </p>
+                        </Typography>
+                    </Slide>
+                    <Slide direction="up" in={true} timeout={2000}>
+                        <Typography sx={{ fontSize: 'large', textAlign: 'center' }} >
+                            <FavoriteBorderIcon />
+                        </Typography>
                     </Slide>
                 </div>
             </div>
-        </Layout>
+        </AboutLayout>
     );
 }
 

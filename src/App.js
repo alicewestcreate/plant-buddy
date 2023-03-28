@@ -1,7 +1,6 @@
 import React from 'react';
 import { Route, Routes } from "react-router-dom";
 import Home from './components/pages/Home';
-
 import Matches from './components/pages/Matches';
 import { Paper } from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
@@ -41,7 +40,6 @@ export function App() {
             <Route path="/quiz" element={<Quiz />} />
             <Route path="/results" element={<Results />} />
             <Route path='/matches' element={<Matches />} />
-
             <Route path="/about" element={<About />} />
           </Routes>
         </Paper>

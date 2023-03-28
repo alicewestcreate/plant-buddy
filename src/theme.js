@@ -17,24 +17,37 @@ export const getDesignTokens = (mode) => ({
             ? {
                 // palette values for light mode
                 primary: {
-                    main: '#E5D3B3',
+                    main: '#E7E8EA'
+                },
+
+                secondary: {
+                    main: '#00352F'
+                },
+                background: {
+                    default: '#E7E8EA',
+                    paper: '#E7E8EA',
                 },
                 text: {
-                    primary: grey[100],
-                    secondary: '#013220'
+                    primary: grey[900],
+                    secondary: '#E7E8EA'
                 },
             }
             : {
                 // palette values for dark mode
                 primary: {
-                    main: '#013220'
+                    main: '#00352F'
+                },
+
+                secondary: {
+                    main: '#00352F'
                 },
                 background: {
-                    default: '#013220',
-                    paper: '#013220',
+                    default: '#00352F',
+                    paper: '#00352F',
                 },
                 text: {
-                    primary: grey[100]
+                    primary: '#E7E8EA',
+                    secondary: '#E7E8EA'
                 },
             }),
     },
@@ -44,9 +57,5 @@ export const getDesignTokens = (mode) => ({
         fontWeight: 400
     },
 });
-
-
-
-
 
 export default theme;
