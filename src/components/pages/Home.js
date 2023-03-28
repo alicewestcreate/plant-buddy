@@ -10,6 +10,7 @@ import Footer from "../Layout/Footer";
 const Home = () => {
 
     const navigate = useNavigate()
+    
 
     return (
 
