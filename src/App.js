@@ -40,7 +40,6 @@ export function App() {
             <Route path="/quiz" element={<Quiz />} />
             <Route path="/results" element={<Results />} />
             <Route path='/matches' element={<Matches />} />
-
             <Route path="/about" element={<About />} />
           </Routes>
         </Paper>
