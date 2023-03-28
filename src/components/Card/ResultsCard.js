@@ -1,5 +1,5 @@
-import React, {useState} from "react";
-import { Card, Grid, Typography, CardMedia, CardContent, Button} from "@mui/material";
+import React, { useState } from "react";
+import { Card, Grid, Typography, CardMedia, CardContent, Button } from "@mui/material";
 import Matched from "./Matched";
 
 
@@ -9,7 +9,7 @@ export default function ResultsCard({ plant }) {
   const [isMatched, setMatched] = useState(false);
   console.log(isMatched);
 
-  const handleClick = (e)=> {
+  const handleClick = (e) => {
     console.log(e);
   }
 
@@ -26,7 +26,7 @@ export default function ResultsCard({ plant }) {
           title="Kitchen Plant"
         />
         <CardContent>
-            <Matched state={isMatched}/>
+          <Matched state={isMatched} />
           <Typography
             color="text.secondary"
             variant="body1"
@@ -36,7 +36,7 @@ export default function ResultsCard({ plant }) {
             {"Hello, my name is"}
           </Typography>
           <Typography
-            color="primary"
+            color="text.secondary"
             variant="h3"
             gutterBottom={true}
             component="div"

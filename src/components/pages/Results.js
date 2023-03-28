@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Card, Typography, Grid} from "@mui/material";
+import { Card, Typography, Grid } from "@mui/material";
 import Layout from "../Layout/Layout";
 import { MainHome } from "./Matches.styled";
 import { useLocation } from "react-router-dom";
@@ -26,7 +26,7 @@ const Results = () => {
   }
 
   const matches = [];
-  
+
   data.forEach((entry) => {
     entry.priority = 0;
     entry.match = false;
@@ -65,18 +65,18 @@ const Results = () => {
   const sortedMatches = matches.sort(sortByPriority);
   const slicedResults = sortedMatches.slice(0, 10);
 
-  const resultsArray = slicedResults.map((perResult) => 
-     <ResultsCard plant={perResult}/>
-  )  
+  const resultsArray = slicedResults.map((perResult) =>
+    <ResultsCard plant={perResult} />
+  )
 
   return (
     <Layout>
       <MainHome>
-        <Typography variant="h1" component="div" sx={{ flexGrow: 1 }}>
+        <Typography variant="h1" component="div" color='text.primary' sx={{ flexGrow: 1 }}>
           RESULTS
         </Typography>
-        <Grid container={true} spacing={4}> 
-        {resultsArray}
+        <Grid container={true} spacing={4}>
+          {resultsArray}
         </Grid>
       </MainHome>
     </Layout>
