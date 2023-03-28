@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Card, Typography, Grid } from "@mui/material";
 import Layout from "../Layout/Layout";
 import { MainHome } from './Matches.styled';
-import fetchData from '../../utils/api';
+import { useLocation } from "react-router-dom";
+import ResultsCard from "../Card/ResultsCard";
+import fetchData from '../../utils/API';
 
 
 const Results = () => {
