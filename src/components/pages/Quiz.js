@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-// import { useNavigation } from
 
-import Box from "@mui/material/Box";
-import { Button } from "@mui/material";
-
+import { Box, Button, Grid, Stack } from "@mui/material";
 import Layout from "../Layout/Layout";
 import Questions from "../Card/Questions";
 import Q from "../Questions/questions.json";
+// import image1 from "../Images/cactus-1.jpg";
+// import image2 from "../Images/cactus-main.jpg";
+
 
 const Quiz = () => {
   let [questionIndex, setQuestion] = useState(0);
@@ -16,9 +16,7 @@ const Quiz = () => {
 
   const [allProperties, setProperties] = useState([]);
   const [allValues, setValues] = useState([]);
-
   const navigate = useNavigate();
-  //   const navigation = useNavigation();
 
   const displayQuestionCard = () => {
     const NumOfQuest = Q.length - 1;
@@ -33,48 +31,85 @@ const Quiz = () => {
   const storePreference = (property, value) => {
     let combindProperties = allProperties.concat(property);
     let combindValue = allValues.concat(value);
-
+    
     setProperties(combindProperties);
     setValues(combindValue);
     console.log(combindProperties);
     console.log(combindValue);
   };
 
-  const sendPreferences = () => {
-    // navigation.navigate('Matches', { allProperties })
-  };
+    console.log(Q[0].images.left);
+
+  const sendPreferences = () => {};
 
   return (
     <Layout>
-      {/* Create a flex container to center the card */}
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          minHeight: "50vh",
-        }}
-      >
-        {showQuestion && (
-          <Questions
-            questionNumber={questionIndex}
-            displayQuestionCard={displayQuestionCard}
-            storePreference={storePreference}
-          />
-        )}
-        {showResultsButton && (
-          <Button
-            variant="contained"
-            color="primary"
-            onClick={() => {
-              navigate("/results", { state: { allProperties, allValues}});
-              sendPreferences();
+      <div style={{ position: "relative" }}>
+        <Grid
+          container
+          spacing={0}
+          sx={{
+            width: "100vw",
+            height: "100vh",
+            position: "absolute",
+            zIndex: 0,
+          }}
+        >
+          <Grid item xs={12} sm={6}>
+            <Box
+              sx={{
+                minHeight: "100vh",
+                backgroundImage: `url("../Images/${Q[questionIndex].images.left}")`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <Box
+              sx={{
+                minHeight: "100vh",
+                backgroundImage: `url("../Images/${Q[questionIndex].images.right}")`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            />
+          </Grid>
+        </Grid>
+        <Stack>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              minHeight: "80vh",
+              maxWidth: "600px",
+              m: "auto",
+              zIndex: 1,
             }}
           >
-            Reveal Your Matches
-          </Button>
-        )}
-      </Box>
+            {showQuestion && (
+              <Questions
+                questionNumber={questionIndex}
+                displayQuestionCard={displayQuestionCard}
+                storePreference={storePreference}
+              />
+            )}
+            {showResultsButton && (
+              <Button
+                variant="contained"
+                color="primary"
+                onClick={() => {
+                  navigate("/results");
+                  sendPreferences();
+                }}
+              >
+                Reveal Your Matches
+              </Button>
+            )}
+          </Box>
+        </Stack>
+      </div>
     </Layout>
   );
 };
