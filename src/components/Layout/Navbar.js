@@ -14,17 +14,15 @@ const Navbar = () => {
     // toggles between colors depending on dark or light mode
     const { toggleColorMode, mode } = useContext(ColorModeContext)
 
-    // navbar color when scroll down 
+    // navbar background color when user scrolls down 
     const [color, setColor] = useState(false);
-    const [textColor, setTextColor] = useState(false);
+
     const changeColor = () => {
-        // if window is less than of equal to 100 pixels then set navbar background color
+        // if window is less than or equal to 100 pixels then set navbar background color
         if (window.scrollY >= 100) {
             setColor(true);
-            setTextColor(true)
         } else {
             setColor(false);
-            setTextColor(false)
         }
     }
     window.addEventListener("scroll", changeColor);
