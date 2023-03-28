@@ -5,18 +5,6 @@ import Matched from "./Matched";
 
 
 export default function ResultsCard({ plant }) {
-  const [isMatched, setMatched] = useState(false);
-  if (isMatched === true) {
-    console.log('works');
-  }
-
-
-  const handleClick = (e) => {
-    console.log('hello');
-  }
-
-
-
   return (
     <Grid item={true}>
       <Card sx={{ width: 270 }}>
@@ -29,7 +17,7 @@ export default function ResultsCard({ plant }) {
         />
         <CardContent>
           <Typography color='text.secondary'>
-            <Matched variant='button' state={isMatched} />
+            <Matched variant='button' id={plant.id} />
           </Typography>
           <Typography
             color="text.secondary"

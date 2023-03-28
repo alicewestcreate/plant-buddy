@@ -1,21 +1,37 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Typography } from '@mui/material';
 import LayoutTwo from '../Layout/LayoutTwo';
 import { MainHome } from './Matches.styled';
+import fetchData from "../../utils/api";
 
 const Matches = () => {
+
+    const [data, setData] = useState(null);
+    // same api call as used to render results 
+    useEffect(() => {
+        const fetchDataAsync = async () => {
+            const responseData = await fetchData();
+            setData(responseData);
+        };
+        fetchDataAsync();
+    }, []);
+    if (!data) {
+        return <div>Loading...</div>;
+    }
+    // when clicked look for items id in local storage and change its value to true. if unclicked it will be changed to false
+    const matches = data.filter(p => {
+        return localStorage.getItem(p.id) === 'true'
+    })
+
+    console.log(matches)
     return (
         <LayoutTwo>
             <MainHome>
-
                 <Typography variant="h1" component="div" sx={{ flexGrow: 1 }}>
                     Your Saved Matches
                 </Typography>
-
             </MainHome>
-
         </LayoutTwo>
-
     )
 }
 

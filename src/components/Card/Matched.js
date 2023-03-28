@@ -1,59 +1,21 @@
 import React, { useState } from 'react';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import { usePersistedState } from '../../hooks';
 
+// takes n id of the item
+const Matched = ({ id }) => {
 
+    const [isMatched, setMatched] = usePersistedState(id, false);
 
-const Matched = ({ }) => {
-    // console.log("plant is",plant);
-    const [isMatched, setMatched] = useState(false);
-
-    function saveMatched(boolean) {
-        if (boolean === true) {
-            console.log('clicked');
-
-            localStorage.setItem('favouritePlaces', JSON.stringify('this would be the card data'));
-
-        } else {
-            console.log('unclicked');
-
-
-
-        }
-    }
-
-    // button.on('click', function () {
-    //     console.log('It worked')
-
-
-    const matchAplant = () => {
-        if (isMatched === true) {
-            return (
-                <FavoriteIcon
-                    sx={{ cursor: "pointer" }}
-                    onClick={() => {
-                        setMatched(false);
-                        saveMatched(false)
-                    }}
-                />
-            );
-        } else {
-            return (
-                <FavoriteBorderIcon
-                    sx={{ cursor: "pointer" }}
-                    onClick={() => {
-                        setMatched(true);
-                        saveMatched(true)
-                    }}
-                />
-            );
-        }
-    };
-
+    // toggles between outline and filled heart icon
+    const Component = isMatched ? FavoriteIcon : FavoriteBorderIcon;
 
     return (
         <div>
-            {matchAplant()}
+            <Component sx={{ cursor: "pointer" }}
+                // when clicked will toggle between isMatched being true or false
+                onClick={() => setMatched(!isMatched)} />
         </div>
     );
 }
