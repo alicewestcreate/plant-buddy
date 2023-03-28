@@ -11,6 +11,7 @@ import './Button.css';
 const Home = () => {
 
     const navigate = useNavigate()
+    
 
     return (
         <>

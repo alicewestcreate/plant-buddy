@@ -1,14 +1,6 @@
 import React, {useState, useEffect} from "react";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
-
+import {CardContent, Card, CardMedia, CardActions, Button, Typography}  from "@mui/material";
 import Q from "../Questions/questions.json"
-
-
 
 export default function Questions({questionNumber, displayQuestionCard, storePreference}) {
 
@@ -21,8 +13,6 @@ export default function Questions({questionNumber, displayQuestionCard, storePre
       }
       loadImage();
     }, [questionNumber]);
-
-
 
 
     const handleClick = (e) => {
