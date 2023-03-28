@@ -2,8 +2,8 @@
     {   
         "question": "Are you a plant whisperer or a plant killer?",
         "images": {
-            "left": "cactus-1.jpg",
-            "right": "cactus-main.jpg"
+            "left": "dead-plant.jpg",
+            "right": "whisperer.jpg"
         },
         "filter": {
             "left": {
@@ -22,10 +22,10 @@
     },
 
     {
-        "question": "Are you a Flower of Foliage kind of planter?",
+        "question": "Are you a Foliage or Flower kind of planter?",
         "images": {
             "left": "cactus-main2.jpg",
-            "right": "daffodils.jpg"
+            "right": "spring.jpg"
         },
         "filter": {
             "left": {
@@ -46,7 +46,7 @@
     {
         "question": "Will you remember to give them a drink?",
         "images": {
-            "left": "spring.jpg",
+            "left": "water-can.jpg",
             "right": "window-plant.jpg"
         },
         "filter": {
@@ -67,8 +67,8 @@
     {
         "question": "Will their new surroundings be for Sun Worshippers or Shade Seekers?",
         "images": {
-            "left": "singlePlant.jpg",
-            "right": "house-plant.jpg"
+            "left": "shade-seekers.jpg",
+            "right": "sun-worshippers.jpg"
         },
         "filter": {
             "left": {
@@ -89,12 +89,12 @@
     {
         "question": "Are you seeking for bit of a conversation starter or simply a new addition to the decor?",
         "images": {
-            "left": "kitchen-plant.jpg",
-            "right": "Monstera.jpg"
+            "left": "plant-3.jpg",
+            "right": "conversation.jpg" 
         },
         "filter": {
             "left": {
-                "btnTxt": "Conversation Starter",
+                "btnTxt": "Convo Starter",
                 "property": "Family",
                 "searchVal": "Bromeliaceae" 
                 
