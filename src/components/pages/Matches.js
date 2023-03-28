@@ -7,13 +7,10 @@ const Matches = () => {
     return (
         <LayoutTwo>
             <MainHome>
-
                 <Typography variant="h1" component="div" sx={{ flexGrow: 1 }}>
                     Your Saved Matches
                 </Typography>
-
             </MainHome>
-
         </LayoutTwo>
 
     )

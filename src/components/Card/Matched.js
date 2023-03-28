@@ -4,9 +4,6 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 
 
 const Matched = ({state}) => {
-    // console.log("plant is",plant);
-
-    // const [isMatched, setMatched] = useState(false);
 
     const matchAplant = () => {
         if (state === true) {
@@ -15,7 +12,6 @@ const Matched = ({state}) => {
             return <FavoriteBorderIcon/>
         }
     }
-
 
     return (
         <div>

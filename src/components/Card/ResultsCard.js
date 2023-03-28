@@ -13,6 +13,13 @@ export default function ResultsCard({ plant }) {
     console.log(e);
   }
 
+  const checkName = (plant) => {
+    if (plant["Common name"] && plant["Common name"].length > 0) {
+      return plant["Common name"][0];
+    } else {
+      return "Plant";
+    }
+  }
 
 
   return (
@@ -20,7 +27,6 @@ export default function ResultsCard({ plant }) {
       <Card sx={{ width: 270 }}>
         <CardMedia
           sx={{ height: 220 }}
-          // Assign the imported image to the image prop
           image={plant.Img}
           alt="picture"
           title="Kitchen Plant"
@@ -41,7 +47,8 @@ export default function ResultsCard({ plant }) {
             gutterBottom={true}
             component="div"
           >
-            {plant["Common name"][0]}
+            {/* {plant["Common name"][0]} */}
+            {checkName(plant)}
           </Typography>
 
           <Typography variant="body2" color="text.secondary">

@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Card, Typography, Grid } from "@mui/material";
+import { Card, Typography, Box } from "@mui/material";
 import Layout from "../Layout/Layout";
 import { MainHome } from './Matches.styled';
 import { useLocation } from "react-router-dom";
 import ResultsCard from "../Card/ResultsCard";
-import fetchData from '../../utils/API';
+import fetchData from "../../utils/API";
+import Loading from "./Loading"
+
 
 
 const Results = () => {
@@ -22,7 +24,7 @@ const Results = () => {
     fetchDataAsync();
   }, []);
   if (!data) {
-    return <div>Loading...</div>;
+    return <Loading/>;
   }
 
   const matches = [];
@@ -63,7 +65,7 @@ const Results = () => {
   }
 
   const sortedMatches = matches.sort(sortByPriority);
-  const slicedResults = sortedMatches.slice(0, 10);
+  const slicedResults = sortedMatches.slice(0, 12);
 
   const resultsArray = slicedResults.map((perResult) =>
     <ResultsCard plant={perResult} />
@@ -75,9 +77,11 @@ const Results = () => {
         <Typography variant="h1" component="div" color='text.primary' sx={{ flexGrow: 1 }}>
           RESULTS
         </Typography>
-        <Grid container={true} spacing={4}>
+        <Box sx={{ display: 'flex', flexDirection: 'row-reverse' }}>
+        {/* <Grid container={true} spacing={4}> */}
           {resultsArray}
-        </Grid>
+        {/* </Grid> */}
+        </Box>
       </MainHome>
     </Layout>
   );
