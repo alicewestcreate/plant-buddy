@@ -15,6 +15,7 @@ export default function Questions({
     storePreference(property, value);
   };
 
+
   return (
     <Box sx={{ maxWidth: 800, p: '3rem', background: 'rgba(255, 255,255, 0.4)' }}>
       <Box mb={"1rem"}>

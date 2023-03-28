@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+
 import { Box, Button, Grid, Stack } from "@mui/material";
 import Layout from "../Layout/Layout";
 import Questions from "../Card/Questions";
@@ -7,10 +8,12 @@ import Q from "../Questions/questions.json";
 // import image1 from "../Images/cactus-1.jpg";
 // import image2 from "../Images/cactus-main.jpg";
 
+
 const Quiz = () => {
   let [questionIndex, setQuestion] = useState(0);
   const [showQuestion, setShowQuestions] = useState(true);
   const [showResultsButton, setShowResults] = useState(false);
+
   const [allProperties, setProperties] = useState([]);
   const [allValues, setValues] = useState([]);
   const navigate = useNavigate();
@@ -28,11 +31,13 @@ const Quiz = () => {
   const storePreference = (property, value) => {
     let combindProperties = allProperties.concat(property);
     let combindValue = allValues.concat(value);
+    
     setProperties(combindProperties);
     setValues(combindValue);
     console.log(combindProperties);
     console.log(combindValue);
   };
+
     console.log(Q[0].images.left);
 
   const sendPreferences = () => {};
