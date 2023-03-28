@@ -9,7 +9,6 @@ const theme = createTheme({
     },
 });
 
-
 export const getDesignTokens = (mode) => ({
     palette: {
         mode,

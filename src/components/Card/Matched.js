@@ -3,10 +3,28 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
 
-const Matched = ({ state }) => {
-    // console.log("plant is",plant);
 
+const Matched = ({ }) => {
+    // console.log("plant is",plant);
     const [isMatched, setMatched] = useState(false);
+
+    function saveMatched(boolean) {
+        if (boolean === true) {
+            console.log('clicked');
+
+            localStorage.setItem('favouritePlaces', JSON.stringify('this would be the card data'));
+
+        } else {
+            console.log('unclicked');
+
+
+
+        }
+    }
+
+    // button.on('click', function () {
+    //     console.log('It worked')
+
 
     const matchAplant = () => {
         if (isMatched === true) {
@@ -15,6 +33,7 @@ const Matched = ({ state }) => {
                     sx={{ cursor: "pointer" }}
                     onClick={() => {
                         setMatched(false);
+                        saveMatched(false)
                     }}
                 />
             );
@@ -24,7 +43,7 @@ const Matched = ({ state }) => {
                     sx={{ cursor: "pointer" }}
                     onClick={() => {
                         setMatched(true);
-
+                        saveMatched(true)
                     }}
                 />
             );

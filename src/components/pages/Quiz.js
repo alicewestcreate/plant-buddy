@@ -5,9 +5,9 @@ import { useNavigate } from "react-router-dom";
 import Box from "@mui/material/Box";
 import './Button.css';
 
-import Layout from "../Layout/Layout";
 import Questions from "../Card/Questions";
 import Q from "../Questions/questions.json";
+import QuizLayout from "../Layout/QuizLayout";
 
 const Quiz = () => {
   let [questionIndex, setQuestion] = useState(0);
@@ -45,7 +45,8 @@ const Quiz = () => {
   };
 
   return (
-    <Layout>
+
+    <QuizLayout>
       {/* Create a flex container to center the card */}
       <Box
         sx={{
@@ -76,7 +77,7 @@ const Quiz = () => {
 
         )}
       </Box>
-    </Layout>
+    </QuizLayout>
   );
 };
 
