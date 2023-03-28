@@ -24,7 +24,7 @@ export default function Questions({
           variant='contained'
           gutterBottom={true}
           component='div'>
-          SUNLIGHT
+          {/* SUNLIGHT */}
         </Typography>
       </Box>
       <Box m={"1rem"}>
