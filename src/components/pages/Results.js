@@ -4,7 +4,9 @@
 // And returns matching result as a card.
 
 import React, { useState, useEffect } from "react";
+
 import { Typography, Box } from "@mui/material";
+
 import Layout from "../Layout/Layout";
 import { MainHome } from "./Matches.styled";
 import { useLocation } from "react-router-dom";

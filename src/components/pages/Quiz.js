@@ -1,3 +1,4 @@
+
 // Quiz page, imports a json file containing questions.
 // It then renders a question at a time, where the use makes a selection.
 // That selection is then tracked and passed through the results page.
@@ -9,6 +10,7 @@ import Questions from "../Card/Questions";
 import Q from "../Questions/questions.json";
 import image1 from "../Images/cactus-1.jpg";
 import image2 from "../Images/cactus-main.jpg";
+
 
 const Quiz = () => {
   let [questionIndex, setQuestion] = useState(0); // Tracks which index to render from the questions.json file.
@@ -46,6 +48,7 @@ const Quiz = () => {
   };
 
   return (
+
     <Layout>
       <div style={{ position: "relative" }}>
         <Grid

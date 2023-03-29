@@ -1,3 +1,4 @@
+// overrides material ui's default styling and sets our theme for both light and dark mode 
 import { createTheme } from '@mui/material';
 import { grey } from '@mui/material/colors';
 
@@ -8,7 +9,6 @@ const theme = createTheme({
         fontWeight: 400
     },
 });
-
 
 export const getDesignTokens = (mode) => ({
     palette: {

@@ -10,7 +10,7 @@ import './Button.css';
 const Home = () => {
 
     const navigate = useNavigate()
-    
+
 
     return (
         <>
@@ -20,7 +20,9 @@ const Home = () => {
                     <Typography variant="h1" component="div">
                         Find Your Perfect Plant Match
                     </Typography>
+
                     <button className="button-75" variant="contained" color="primary" onClick={() => navigate("/quiz")} sx={{
+
                         fontSize: 18,
                     }} >
                         Start Quiz

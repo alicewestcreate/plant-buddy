@@ -1,3 +1,4 @@
+
 // Result card, recieves a prop call plant. This is an item from the API. 
 // It the maps the properites from the plant item to the results card. 
 import React, { useState } from "react";
@@ -57,5 +58,10 @@ export default function ResultsCard({ plant }) {
         </Typography>
       </CardContent>
     </Card>
-  );
+ );
+
+
+
+
+
 }

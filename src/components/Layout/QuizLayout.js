@@ -1,10 +1,8 @@
-// Layout wrapper for pages included navbar, footer and background image.
-
-import Footer from './Footer';
-import { Main, MainContent } from './AboutLayout.styled';
 import Navbar from './Navbar';
+import Footer from './Footer';
+import { Main, MainContent } from './QuizLayout.styled';
 
-const AboutLayout = (props) => {
+const QuizLayout = (props) => {
     const { children } = props;
     return (
         <Main>
@@ -17,4 +15,4 @@ const AboutLayout = (props) => {
     )
 }
 
-export default AboutLayout;
+export default QuizLayout
