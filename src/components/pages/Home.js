@@ -25,7 +25,7 @@ const Home = () => {
                     }} >
                         Start Quiz
                     </button> */}
-                    <Button className="button-75" role={'button'} variant="contained" color="primary" onClick={() => navigate("/quiz")} sx={{
+                    <Button className="button-75" variant="contained" color="primary" onClick={() => navigate("/quiz")} sx={{
                         fontSize: 18,
                     }} >
                         Start Quiz
