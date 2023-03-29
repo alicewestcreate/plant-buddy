@@ -17,5 +17,24 @@ export const ContentStyle = styled("div")({
 export const IconContainer = styled("div")({
     display: 'flex',
     flexDirection: 'row',
+    gap: '1rem',
     justifyContent: 'center'
+})
+
+export const ImageContainer = styled("div")({
+    width: "200px",
+    height: "200px",
+    borderRadius: "5px",
+    overflow: "hidden",
+    "& img": {
+        width: "100%",
+        height: "100%",
+        objectFit: "cover"
+    },
+    maxWidth: "100%",
+    maxHeight: "100%"
+})
+
+export const NameContainer = styled("div")({
+    textAlign: 'center'
 })
