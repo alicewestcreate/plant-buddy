@@ -24,8 +24,7 @@ const Contact = () => {
                 <ContentStyle>
                     {/* map through data object and create section for each person */}
                     {creators.map((creator) => (
-
-                        <div key={creator.name} sx={{ margin: '0 20px' }}>
+                        <div key={creator.name} sx={{ margin: '0 20px', backdropFilter: 'blur(10px)', }}>
                             <img src={creator.Image} alt={creator.name} sx={{ width: '200px', height: '200px' }} />
                             <Typography variant='h3'>{creator.name}</Typography>
                             <IconContainer>
