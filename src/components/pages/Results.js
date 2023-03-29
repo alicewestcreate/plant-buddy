@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Card, Typography, Grid } from "@mui/material";
+import { Typography, Grid } from "@mui/material";
 import Layout from "../Layout/Layout";
 import { MainHome } from "./Matches.styled";
 import { useLocation } from "react-router-dom";

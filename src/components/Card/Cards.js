@@ -1,5 +1,5 @@
 import React from "react";
-import {Card, CardActions, CardContent, CardMedia, Button, Typography, Box, Stack} from '@mui/material';
+import { CardActions, CardContent, Typography, Box, Stack } from '@mui/material';
 
 // Import styled components
 import { CardContainer, StyledCard, StyledCardMedia, SunlightTypography, StyledButton } from './Cards.styled';
@@ -8,7 +8,7 @@ export default function Cards(props) {
     // console.log(props.content);
     return (
         <Stack>
-           <Box
+            <Box
                 sx={{
                     display: 'flex',
                     justifyContent: 'center',
@@ -23,7 +23,7 @@ export default function Cards(props) {
                         <StyledCardMedia
                             // Reference the image in the public folder
                             image="/kitchen-plant.jpg"
-                            // title="Kitchen Plant"
+                        // title="Kitchen Plant"
                         />
                         <CardContent>
                             <SunlightTypography>
@@ -38,6 +38,6 @@ export default function Cards(props) {
                     </StyledCard>
                 </CardContainer>
             </Box>
-            </Stack>
+        </Stack>
     );
 }

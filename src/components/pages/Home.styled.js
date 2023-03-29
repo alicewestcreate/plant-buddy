@@ -1,4 +1,3 @@
-import { red } from "@mui/material/colors";
 import { styled } from "@mui/system";
 
 export const MainHome = styled("div")({
