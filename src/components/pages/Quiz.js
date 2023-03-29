@@ -27,7 +27,7 @@ const Quiz = () => {
   // If the questionIndex is not greater than the numOfQuest
   // Then add one to the questionIndex, and render that question.
   const displayQuestionCard = () => {
-    const NumOfQuest = Q.length - 1;
+    // const NumOfQuest = Q.length - 1;
     if (questionIndex >= 4) {
       setShowQuestions(false);
       setShowResults(true);
