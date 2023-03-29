@@ -11,6 +11,7 @@ const Matched = ({ id }) => {
     // toggles between outline and filled heart icon
     const Component = isMatched ? FavoriteIcon : FavoriteBorderIcon;
 
+
     return (
         <div>
             <Component sx={{ cursor: "pointer" }}

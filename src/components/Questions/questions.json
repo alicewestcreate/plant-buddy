@@ -1,7 +1,10 @@
 [
     {   
         "question": "Are you a plant whisperer or a plant killer?",
-        "imageURL": "kitchen-plant.jpg",
+        "images": {
+            "left": "dead-plant.jpg",
+            "right": "whisperer.jpg"
+        },
         "filter": {
             "left": {
                 "btnTxt": "I'm a Whisperer",
@@ -19,8 +22,11 @@
     },
 
     {
-        "question": "Are you a Flower of Foliage kind of planter?",
-        "imageURL": "kitchen-plant.jpg",
+        "question": "Are you a Foliage or Flower kind of planter?",
+        "images": {
+            "left": "cactus-main2.jpg",
+            "right": "spring.jpg"
+        },
         "filter": {
             "left": {
                 "btnTxt": "Flower",
@@ -39,7 +45,10 @@
 
     {
         "question": "Will you remember to give them a drink?",
-        "imageURL": "kitchen-plant.jpg",
+        "images": {
+            "left": "water-can.jpg",
+            "right": "window-plant.jpg"
+        },
         "filter": {
             "left": {
                 "btnTxt": "If they're lucky",
@@ -57,7 +66,10 @@
 
     {
         "question": "Will their new surroundings be for Sun Worshippers or Shade Seekers?",
-        "imageURL": "kitchen-plant.jpg",
+        "images": {
+            "left": "shade-seekers.jpg",
+            "right": "sun-worshippers.jpg"
+        },
         "filter": {
             "left": {
                 "btnTxt": "Sun Worshippers",
@@ -76,10 +88,13 @@
 
     {
         "question": "Are you seeking for bit of a conversation starter or simply a new addition to the decor?",
-        "imageURL": "kitchen-plant.jpg",
+        "images": {
+            "left": "plant-3.jpg",
+            "right": "conversation.jpg" 
+        },
         "filter": {
             "left": {
-                "btnTxt": "Conversation Starter",
+                "btnTxt": "Convo Starter",
                 "property": "Family",
                 "searchVal": "Bromeliaceae" 
                 
