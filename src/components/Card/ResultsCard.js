@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { Card, Grid, Typography, CardMedia, CardContent, Button } from "@mui/material";
 import Matched from "./Matched";
 
-
-
 export default function ResultsCard({ plant }) {
   console.log(plant);
   const [isMatched, setMatched] = useState(false);
@@ -23,8 +21,8 @@ export default function ResultsCard({ plant }) {
 
 
   return (
-    <Grid item={true}>
-      <Card sx={{ width: 270 }}>
+  
+      <Card sx={{ width: 270, m: 2}}>
         <CardMedia
           sx={{ height: 220 }}
           image={plant.Img}
@@ -65,6 +63,6 @@ export default function ResultsCard({ plant }) {
           </Typography>
         </CardContent>
       </Card>
-    </Grid>
+
   );
 }

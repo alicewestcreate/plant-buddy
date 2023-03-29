@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Card, Typography, Box } from "@mui/material";
+import { flexbox } from '@mui/system';
 import Layout from "../Layout/Layout";
 import { MainHome } from './Matches.styled';
 import { useLocation } from "react-router-dom";
@@ -28,6 +29,9 @@ const Results = () => {
   }
 
   const matches = [];
+
+  console.log("Prop",properties);
+  console.log("Valu",values);
 
   data.forEach((entry) => {
     entry.priority = 0;
@@ -77,10 +81,8 @@ const Results = () => {
         <Typography variant="h1" component="div" color='text.primary' sx={{ flexGrow: 1 }}>
           RESULTS
         </Typography>
-        <Box sx={{ display: 'flex', flexDirection: 'row-reverse' }}>
-        {/* <Grid container={true} spacing={4}> */}
+        <Box sx={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', alignContent: 'stretch'}} >
           {resultsArray}
-        {/* </Grid> */}
         </Box>
       </MainHome>
     </Layout>

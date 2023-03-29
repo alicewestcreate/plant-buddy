@@ -1,12 +1,11 @@
-import { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
 import { Box, Button, Grid, Stack } from "@mui/material";
 import Layout from "../Layout/Layout";
 import Questions from "../Card/Questions";
 import Q from "../Questions/questions.json";
-// import image1 from "../Images/cactus-1.jpg";
-// import image2 from "../Images/cactus-main.jpg";
+import image1 from "../Images/cactus-1.jpg";
+import image2 from "../Images/cactus-main.jpg";
 
 
 const Quiz = () => {
@@ -38,7 +37,8 @@ const Quiz = () => {
     console.log(combindValue);
   };
 
-    console.log(Q[0].images.left);
+
+    // console.log(Q[0].images.left);
 
   const sendPreferences = () => {};
 
@@ -59,7 +59,8 @@ const Quiz = () => {
             <Box
               sx={{
                 minHeight: "100vh",
-                backgroundImage: `url("../Images/${Q[questionIndex].images.left}")`,
+                // backgroundImage: `url("../Images/${Q[questionIndex].images.left}")`,
+                backgroundImage: `url("${image2}")`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
@@ -69,7 +70,9 @@ const Quiz = () => {
             <Box
               sx={{
                 minHeight: "100vh",
-                backgroundImage: `url("../Images/${Q[questionIndex].images.right}")`,
+                  // backgroundImage: `url("../Images/${Q[questionIndex].images.right}")`,
+                backgroundImage: `url("${image1}")`,
+
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
@@ -95,17 +98,17 @@ const Quiz = () => {
                 storePreference={storePreference}
               />
             )}
-            {showResultsButton && (
-              <Button
-                variant="contained"
-                color="primary"
-                onClick={() => {
-                  navigate("/results");
-                  sendPreferences();
-                }}
-              >
-                Reveal Your Matches
-              </Button>
+        {showResultsButton && (
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={() => {
+              navigate("/results", { state: { allProperties, allValues}});
+              sendPreferences();
+            }}
+          >
+            Reveal Your Matches
+          </Button>
             )}
           </Box>
         </Stack>
