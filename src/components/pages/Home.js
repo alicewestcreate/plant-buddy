@@ -20,16 +20,11 @@ const Home = () => {
                     <Typography variant="h1" component="div">
                         Find Your Perfect Plant Match
                     </Typography>
-                    {/* <button className="button-75" role={'button'} variant="contained" color="primary" onClick={() => navigate("/quiz")} sx={{
+                    <button className="button-75" variant="contained" color="primary" onClick={() => navigate("/quiz")} sx={{
                         fontSize: 18,
                     }} >
                         Start Quiz
-                    </button> */}
-                    <Button className="button-75" variant="contained" color="primary" onClick={() => navigate("/quiz")} sx={{
-                        fontSize: 18,
-                    }} >
-                        Start Quiz
-                    </Button>
+                    </button>
                 </MainHome>
             </Layout>
             <Footer />
