@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import LayoutTwo from '../Layout/LayoutTwo';
 import { MainHome } from './Matches.styled';
-import fetchData from "../../utils/api";
+import fetchData from "../../utils/API";
 import { Grid, Typography } from "@mui/material";
 import ResultsCard from '../Card/ResultsCard';
 

@@ -58,7 +58,7 @@ export default function ResultsCard({ plant }) {
         </Typography>
       </CardContent>
     </Card>
- );
+  );
 
 
 
