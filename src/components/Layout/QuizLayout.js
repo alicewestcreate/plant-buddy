@@ -1,4 +1,4 @@
-import Navbar from './Navbar';
+import QuizNavbar from './QuizNavbar';
 import Footer from './Footer';
 import { Main, MainContent } from './QuizLayout.styled';
 
@@ -6,7 +6,7 @@ const QuizLayout = (props) => {
     const { children } = props;
     return (
         <Main>
-            <Navbar />
+            <QuizNavbar />
             <MainContent>
                 {children}
             </MainContent>
