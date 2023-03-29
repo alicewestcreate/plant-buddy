@@ -1,13 +1,14 @@
 
+
 // Result card, recieves a prop call plant. This is an item from the API. 
 // It the maps the properites from the plant item to the results card. 
+
 import React, { useState } from "react";
 import { Card, Typography, CardMedia, CardContent } from "@mui/material";
 import Matched from "./Matched";
 
 export default function ResultsCard({ plant }) {
   const [isMatched] = useState(false);
-
   // For items that do not have a name, return plant. 
   const checkName = (plant) => {
     if (plant["Common name"] && plant["Common name"].length > 0) {
@@ -26,7 +27,9 @@ export default function ResultsCard({ plant }) {
         title="Kitchen Plant"
       />
       <CardContent>
-        <Matched state={isMatched} />
+
+        <Matched id={plant.id} state={!isMatched} />
+
         <Typography
           color="text.secondary"
           variant="body1"
