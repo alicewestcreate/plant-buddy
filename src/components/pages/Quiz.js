@@ -8,8 +8,8 @@ import { Box, Button, Grid, Stack } from "@mui/material";
 import Layout from "../Layout/Layout";
 import Questions from "../Card/Questions";
 import Q from "../Questions/questions.json";
-import image1 from "../Images/cactus-1.jpg";
-import image2 from "../Images/cactus-main.jpg";
+// import image1 from "../Images/cactus-1.jpg";
+// import image2 from "../Images/cactus-main.jpg";
 
 
 const Quiz = () => {
@@ -28,7 +28,7 @@ const Quiz = () => {
   // Then add one to the questionIndex, and render that question.
   const displayQuestionCard = () => {
     const NumOfQuest = Q.length - 1;
-    if (questionIndex >= NumOfQuest) {
+    if (questionIndex >= 4) {
       setShowQuestions(false);
       setShowResults(true);
     }
@@ -66,8 +66,8 @@ const Quiz = () => {
             <Box
               sx={{
                 minHeight: "100vh",
-                // backgroundImage: `url("../Images/${Q[questionIndex].images.left}")`,
-                backgroundImage: `url("${image2}")`,
+                backgroundImage: `url("../Images/${Q[questionIndex].images.left}")`,
+                // backgroundImage: `url("${image2}")`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
@@ -78,8 +78,8 @@ const Quiz = () => {
             <Box
               sx={{
                 minHeight: "100vh",
-                // backgroundImage: `url("../Images/${Q[questionIndex].images.right}")`,
-                backgroundImage: `url("${image1}")`,
+                backgroundImage: `url("../Images/${Q[questionIndex].images.right}")`,
+                // backgroundImage: `url("${image1}")`,
 
                 backgroundSize: "cover",
                 backgroundPosition: "center",
