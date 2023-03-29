@@ -110,9 +110,8 @@ const Quiz = () => {
             {/* While showResultsButton is true, render button. */}
             {/* - Navigate to next page, passing the states from this page to the next. */}
             {showResultsButton && (
-              <Button
+              <Button className="button-75"
                 variant="contained"
-                color="primary"
                 onClick={() => {
                   navigate("/results", { state: { allProperties, allValues } });
                 }}
