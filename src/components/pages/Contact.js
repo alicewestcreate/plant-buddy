@@ -3,11 +3,12 @@ import Typography from '@mui/material/Typography';
 import Fade from '@mui/material/Fade';
 import AboutLayout from '../Layout/AboutLayout';
 import creators from '../../utils/creators';
-import { ContainerStyle, ContentStyle, IconContainer } from './Contact.styled';
+import { ContainerStyle, ContentStyle, IconContainer, ImageContainer, NameContainer } from './Contact.styled';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const Contact = () => {
+
     return (
         <AboutLayout>
             <Fade in={true} timeout={1000}>
@@ -25,18 +26,39 @@ const Contact = () => {
                     {/* map through data object and create section for each person */}
                     {creators.map((creator) => (
                         <div key={creator.name} sx={{ margin: '0 20px', backdropFilter: 'blur(10px)', }}>
-                            <img src={creator.Image} alt={creator.name} sx={{ width: '200px', height: '200px' }} />
-                            <Typography variant='h3'>{creator.name}</Typography>
+                            <ImageContainer>
+                                <img src={creator.Image} alt={creator.name} />
+                            </ImageContainer>
+                            <NameContainer>
+                                <Typography variant='h3'>{creator.name}</Typography>
+                            </NameContainer>
                             <IconContainer>
                                 {/* will open link in new tab */}
-                                <a href={creator.github} target="_blank" rel="noopener noreferrer" sx={{ color: 'inherit', textDecoration: 'none' }}>
-                                    <Typography sx={{ fontSize: 'large', textAlign: 'center' }} >
-                                        <GitHubIcon />
+                                <a href={creator.github} target="_blank" rel="noopener noreferrer" sx={{ color: 'text.primary', textDecoration: 'none' }}>
+                                    <Typography sx={{ textAlign: 'center' }} >
+                                        <GitHubIcon sx={{
+                                            fontSize: '30px',
+                                            color: 'text.primary',
+                                            cursor: 'pointer',
+                                            transition: 'color 0.3s ease-in-out',
+                                            '&:hover': {
+                                                color: '#f34079',
+                                            },
+                                        }}
+                                        />
                                     </Typography>
                                 </a>
-                                <a href={creator.linkedIn} target="_blank" rel="noopener noreferrer" sx={{ color: 'inherit', textDecoration: 'none' }}>
-                                    <Typography sx={{ fontSize: 'large', textAlign: 'center' }} >
-                                        <LinkedInIcon />
+                                <a href={creator.linkedIn} target="_blank" rel="noopener noreferrer" sx={{ color: 'text.primary', textDecoration: 'none' }}>
+                                    <Typography sx={{ textAlign: 'center' }} >
+                                        <LinkedInIcon sx={{
+                                            fontSize: '30px',
+                                            color: 'text.primary',
+                                            cursor: 'pointer',
+                                            transition: 'color 0.3s ease-in-out',
+                                            '&:hover': {
+                                                color: '#f34079',
+                                            },
+                                        }} />
                                     </Typography>
                                 </a>
                             </IconContainer>
