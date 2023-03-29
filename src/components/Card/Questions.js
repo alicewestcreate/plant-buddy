@@ -28,7 +28,7 @@ export default function Questions({
         </Typography>
       </Box>
       <Box m={"1rem"}>
-        <Typography variant='body2' color='text.secondary'>
+        <Typography variant='h3' color='text.secondary'>
           {Q[questionNumber].question}
         </Typography>
       </Box>
