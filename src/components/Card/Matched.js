@@ -3,7 +3,7 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { usePersistedState } from '../../hooks';
 
-// takes n id of the item
+// takes in id of the item
 const Matched = ({ id }) => {
 
     const [isMatched, setMatched] = usePersistedState(id, false);

@@ -16,6 +16,8 @@ export const usePersistedState = (key, defaultValue = null) => {
     })
     // takes in the new value's key and saves it as a string to local storage
     const setAndPersistValue = (newValue) => {
+        console.log('functionKey', key)
+        console.log('functionNewValue', newValue)
         localStorage.setItem(key, JSON.stringify(newValue));
         setValue(newValue)
     }
