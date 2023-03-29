@@ -5,7 +5,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Box, Button, Grid, Stack } from "@mui/material";
-import Layout from "../Layout/Layout";
+import QuizLayout from "../Layout/QuizLayout";
 import Questions from "../Card/Questions";
 import Q from "../Questions/questions.json";
 // import image1 from "../Images/cactus-1.jpg";
@@ -49,7 +49,7 @@ const Quiz = () => {
 
   return (
 
-    <Layout>
+    <QuizLayout>
       <div style={{ position: "relative" }}>
         <Grid
           container
@@ -122,7 +122,7 @@ const Quiz = () => {
           </Box>
         </Stack>
       </div>
-    </Layout>
+    </QuizLayout>
   );
 };
 

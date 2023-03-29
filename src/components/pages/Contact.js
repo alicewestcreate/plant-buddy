@@ -18,7 +18,7 @@ const Contact = () => {
                 </Typography>
             </Fade>
             <Typography variant='h3' component={'div'} sx={{ margin: '0 5rem', backdropFilter: 'blur(10px)', }}>
-                We hope you like our app and find a new plant brings you joy! If you'd like to say hi to the makers contact us on:
+                We hope you like our app and find a new plant brings you joy! If you'd like to say hi to the makers contact us below:
             </Typography>
             <ContainerStyle>
                 <ContentStyle>

@@ -14,7 +14,7 @@ const Matched = ({ id }) => {
 
     return (
         <div>
-            <Component sx={{ cursor: "pointer" }}
+            <Component sx={{ cursor: "pointer", color: 'text.secondary' }}
                 // when clicked will toggle between isMatched being true or false
                 onClick={() => setMatched(!isMatched)} />
         </div>
