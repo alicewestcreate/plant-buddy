@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 // Style object for the container div
 export const ContainerStyle = styled("div")({
     display: 'flex',
@@ -7,15 +6,14 @@ export const ContainerStyle = styled("div")({
     justifyContent: 'center',
     padding: '0 1rem',
     marginTop: '4rem',
-
 });
-
 export const ContentStyle = styled("div")({
     display: 'flex',
+    flexDirection: 'row',
+    gap: '3rem',
     justifyContent: 'center',
-    backdropFilter: 'blur(10px)'
+    backdropFilter: 'blur(10px)',
 })
-
 export const IconContainer = styled("div")({
     display: 'flex',
     flexDirection: 'row',

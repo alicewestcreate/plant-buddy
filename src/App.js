@@ -10,7 +10,7 @@ import SplashScreen from './components/SplashScreen/SplashScreen';
 import Quiz from './components/pages/Quiz';
 import Results from "./components/pages/Results"
 import About from './components/pages/About'
-// import Contact from './components/pages/Contact';
+import Contact from './components/pages/Contact';
 
 
 export function App() {
@@ -42,7 +42,7 @@ export function App() {
             <Route path="/results" element={<Results />} />
             <Route path='/matches' element={<Matches />} />
             <Route path="/about" element={<About />} />
-            {/* <Route path="/contact" element={<Contact />} /> */}
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </Paper>
       </ThemeProvider>
