@@ -1,3 +1,6 @@
+// Quiz page, imports a json file containing questions.
+// It then renders a question at a time, where the use makes a selection.
+// That selection is then tracked and passed through the results page.
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Box, Button, Grid, Stack } from "@mui/material";
@@ -7,23 +10,20 @@ import Q from "../Questions/questions.json";
 import image1 from "../Images/cactus-1.jpg";
 import image2 from "../Images/cactus-main.jpg";
 
-
-const generateKey = () => {
-  return `${ new Date().getTime() }`;
-}
-
-console.log(generateKey());
-
-
 const Quiz = () => {
-  let [questionIndex, setQuestion] = useState(0);
-  const [showQuestion, setShowQuestions] = useState(true);
-  const [showResultsButton, setShowResults] = useState(false);
+  let [questionIndex, setQuestion] = useState(0); // Tracks which index to render from the questions.json file.
+  const [showQuestion, setShowQuestions] = useState(true); // Show questions, until false.
+  const [showResultsButton, setShowResults] = useState(false); // Show results when true.
 
-  const [allProperties, setProperties] = useState([]);
-  const [allValues, setValues] = useState([]);
-  const navigate = useNavigate();
+  const [allProperties, setProperties] = useState([]); // Store all properties selected during the quiz.
+  const [allValues, setValues] = useState([]); // Store all values selected during the quiz
 
+  const navigate = useNavigate(); // Imported from react dom.
+
+  // Decide which question to display.
+  // Get the length of question inside the question.json file.
+  // If the questionIndex is not greater than the numOfQuest
+  // Then add one to the questionIndex, and render that question.
   const displayQuestionCard = () => {
     const NumOfQuest = Q.length - 1;
     if (questionIndex >= NumOfQuest) {
@@ -34,20 +34,16 @@ const Quiz = () => {
     setQuestion(addOne);
   };
 
+  // Function that is passed down into the quiz card component.
+  // For each question, store the selected property and value assoicated to that question.
   const storePreference = (property, value) => {
     let combindProperties = allProperties.concat(property);
     let combindValue = allValues.concat(value);
-    
+
+    // Update useState with the new values each time.
     setProperties(combindProperties);
     setValues(combindValue);
-    console.log(combindProperties);
-    console.log(combindValue);
   };
-
-
-    // console.log(Q[0].images.left);
-
-  const sendPreferences = () => {};
 
   return (
     <Layout>
@@ -62,6 +58,7 @@ const Quiz = () => {
             zIndex: 0,
           }}
         >
+          {/* Background image Left */}
           <Grid item xs={12} sm={6}>
             <Box
               sx={{
@@ -73,11 +70,12 @@ const Quiz = () => {
               }}
             />
           </Grid>
+          {/* Background image Right */}
           <Grid item xs={12} sm={6}>
             <Box
               sx={{
                 minHeight: "100vh",
-                  // backgroundImage: `url("../Images/${Q[questionIndex].images.right}")`,
+                // backgroundImage: `url("../Images/${Q[questionIndex].images.right}")`,
                 backgroundImage: `url("${image1}")`,
 
                 backgroundSize: "cover",
@@ -98,6 +96,7 @@ const Quiz = () => {
               zIndex: 1,
             }}
           >
+            {/* Whilse showQuestion is true, render Questions */}
             {showQuestion && (
               <Questions
                 questionNumber={questionIndex}
@@ -105,33 +104,18 @@ const Quiz = () => {
                 storePreference={storePreference}
               />
             )}
-
-{/* {posts.map(post => <Post details={post} key={post.id} />)} */}
-
-
-{/* {showResultsButton && (unique.map(uni => 
-          <Button variant="contained" color="primary"
-            onClick={() => { 
-              navigate("/results", { state: { allProperties, allValues, uni}});
-              sendPreferences();
-            }}
-          >
-            Reveal Your Matches
-          </Button>
-            ))} */}
-
-        {showResultsButton && (
-          <Button
-            variant="contained"
-            color="primary"
-            onClick={() => { 
-              let unique = generateKey()
-              navigate("/results", { state: { allProperties, allValues, unique}});
-              sendPreferences();
-            }}
-          >
-            Reveal Your Matches
-          </Button>
+            {/* While showResultsButton is true, render button. */}
+            {/* - Navigate to next page, passing the states from this page to the next. */}
+            {showResultsButton && (
+              <Button
+                variant="contained"
+                color="primary"
+                onClick={() => {
+                  navigate("/results", { state: { allProperties, allValues } });
+                }}
+              >
+                Reveal Your Matches
+              </Button>
             )}
           </Box>
         </Stack>

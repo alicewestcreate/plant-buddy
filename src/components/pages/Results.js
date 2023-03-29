@@ -1,25 +1,28 @@
+// Result page, recieves the preferences from the quiz
+// Calls the API and then filters each item from API against
+// the properties collected from the quiz.
+// And returns matching result as a card.
+
 import React, { useState, useEffect } from "react";
-import { Card, Typography, Box } from "@mui/material";
+import { Typography, Box } from "@mui/material";
 import Layout from "../Layout/Layout";
-import { MainHome } from './Matches.styled';
+import { MainHome } from "./Matches.styled";
 import { useLocation } from "react-router-dom";
 import ResultsCard from "../Card/ResultsCard";
 import fetchData from "../../utils/API";
-import Loading from "./Loading"
-
+import Loading from "./Loading";
 
 const Results = () => {
-
-  // When Results page is rendered 
-  // Pass through state varibables from previous page. 
+  // Pass through state varibables from previous page.
+  // These are the users preferences
   const location = useLocation();
   const properties = location.state?.allProperties;
   const values = location.state?.allValues;
-  const unique = location.state?.unique
+  const unique = location.state?.unique;
 
-
-  //
+  // Call API and store reponse in data useState
   const [data, setData] = useState(null);
+
   useEffect(() => {
     const fetchDataAsync = async () => {
       const responseData = await fetchData();
@@ -28,18 +31,14 @@ const Results = () => {
     fetchDataAsync();
   }, []);
   if (!data) {
-    return <Loading/>;
+    return <Loading />;
   }
 
-
-  // ======================//
   // FILTER EACH ITEM RETURNED IN DATA//
   // For each item matches, return true.
-  // For each property matched, plus one to prioity points 
+  // For each property matched, plus one to prioity points
 
   const matches = [];
-  console.log("Prop",properties);
-  console.log("Valu",values);
 
   data.forEach((entry) => {
     entry.priority = 0;
@@ -65,6 +64,7 @@ const Results = () => {
       entry.priority += 1;
       entry.match = true;
     }
+    // if the item is matched, push to matches array.
     if (entry.match === true) {
       matches.push(entry);
     } else {
@@ -72,35 +72,49 @@ const Results = () => {
     }
   });
 
+  // This compares the value of two prioity points/
+  // If one is higher than the other, it changes order.
+  // Else it stay in place.
   function sortByPriority(a, b) {
     return b.priority - a.priority;
   }
 
+  // Sort results by Priority and give the top 12.
   const sortedMatches = matches.sort(sortByPriority);
   const slicedResults = sortedMatches.slice(0, 12);
 
-  // const resultsArray = slicedResults.map((perResult, index) => {
-  //   console.log(`Index of item ${perResult} is ${index}`);
-  //   return <ResultsCard plant={perResult} unique={perResult.id} test="test" />;
-  // });
+  // Map each result to the result card. Give each card a unique key. (NOTE, a unique key is to be assgined at this level.
+  // If it passed through props it will not be unquie to this element and will still give an error.)
   const resultsArray = slicedResults.map((perResult) => {
-    console.log(`Index of item ${perResult} is ${perResult.id}`);
-    return <ResultsCard plant={perResult} unique={perResult.id} />;
+    return <ResultsCard plant={perResult} key={perResult.id} />;
   });
 
   return (
     <>
-    <div key={unique}></div>
-    <Layout>
-      <MainHome>
-        <Typography variant="h1" component="div" color='text.primary' sx={{ flexGrow: 1 }}>
-          RESULTS
-        </Typography>
-        <Box sx={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', alignContent: 'stretch'}} >
-          {resultsArray}
-        </Box>
-      </MainHome>
-    </Layout>
+      <div key={unique}></div>
+      <Layout>
+        <MainHome>
+          <Typography
+            variant="h1"
+            component="div"
+            color="text.primary"
+            sx={{ flexGrow: 1 }}
+          >
+            RESULTS
+          </Typography>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              flexWrap: "wrap",
+              justifyContent: "center",
+              alignContent: "stretch",
+            }}
+          >
+            {resultsArray}
+          </Box>
+        </MainHome>
+      </Layout>
     </>
   );
 };
