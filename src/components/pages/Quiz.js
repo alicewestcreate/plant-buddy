@@ -66,7 +66,7 @@ const Quiz = () => {
             <Box
               sx={{
                 minHeight: "100vh",
-                backgroundImage: `url("../Images/${Q[questionIndex].images.left}")`,
+                backgroundImage: `url("../Images/${Q[questionIndex].img.left}")`,
                 // backgroundImage: `url("${image2}")`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
@@ -78,7 +78,7 @@ const Quiz = () => {
             <Box
               sx={{
                 minHeight: "100vh",
-                backgroundImage: `url("../Images/${Q[questionIndex].images.right}")`,
+                backgroundImage: `url("../Images/${Q[questionIndex].img.right}")`,
                 // backgroundImage: `url("${image1}")`,
 
                 backgroundSize: "cover",
