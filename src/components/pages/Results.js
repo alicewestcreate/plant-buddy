@@ -3,7 +3,7 @@ import { Typography, Grid } from "@mui/material";
 import Layout from "../Layout/Layout";
 import { MainHome } from "./Matches.styled";
 import { useLocation } from "react-router-dom";
-import fetchData from "../../utils/api";
+import fetchData from "../../utils/API";
 import ResultsCard from "../Card/ResultsCard";
 
 
