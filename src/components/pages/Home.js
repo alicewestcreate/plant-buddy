@@ -1,5 +1,5 @@
 import React from "react";
-import Typography from '@mui/material/Typography';
+import {Typography, Button} from '@mui/material';
 import Layout from "../Layout/Layout";
 import { useNavigate } from "react-router-dom";
 import { MainHome } from "./Home.styled";
@@ -20,11 +20,16 @@ const Home = () => {
                     <Typography variant="h1" component="div">
                         Find Your Perfect Plant Match
                     </Typography>
-                    <button className="button-75" role={'button'} variant="contained" color="primary" onClick={() => navigate("/quiz")} sx={{
+                    {/* <button className="button-75" role={'button'} variant="contained" color="primary" onClick={() => navigate("/quiz")} sx={{
                         fontSize: 18,
                     }} >
                         Start Quiz
-                    </button>
+                    </button> */}
+                    <Button className="button-75" role={'button'} variant="contained" color="primary" onClick={() => navigate("/quiz")} sx={{
+                        fontSize: 18,
+                    }} >
+                        Start Quiz
+                    </Button>
                 </MainHome>
             </Layout>
             <Footer />
