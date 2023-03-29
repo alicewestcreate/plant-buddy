@@ -20,13 +20,7 @@ const Home = () => {
                     <Typography variant="h1" component="div">
                         Find Your Perfect Plant Match
                     </Typography>
-<<<<<<< Updated upstream
-
                     <Button className="button-75" variant="contained" color="primary" onClick={() => navigate("/quiz")} sx={{
-
-=======
-                    <Button className="button-75" variant="contained" color="primary" onClick={() => navigate("/quiz")} sx={{
->>>>>>> Stashed changes
                         fontSize: 18,
                     }} >
                         Start Quiz
