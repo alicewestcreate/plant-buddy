@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Box } from "@mui/material";
+import { Box } from "@mui/material";
 // import { makeStyles } from '@material-ui/styles'
 import Layout from "../Layout/Layout";
 import { MainHome } from "./Matches.styled";

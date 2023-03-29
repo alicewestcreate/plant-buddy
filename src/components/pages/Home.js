@@ -1,7 +1,6 @@
 import React from "react";
 import Typography from '@mui/material/Typography';
 import Layout from "../Layout/Layout";
-// import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { MainHome } from "./Home.styled";
 import Navbar from "../Layout/Navbar";

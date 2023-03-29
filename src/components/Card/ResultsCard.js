@@ -5,8 +5,7 @@ import { Card, Typography, CardMedia, CardContent } from "@mui/material";
 import Matched from "./Matched";
 
 export default function ResultsCard({ plant }) {
-  const [isMatched, setMatched] = useState(false);
-
+  const [isMatched] = useState(false);
 
   // For items that do not have a name, return plant. 
   const checkName = (plant) => {
