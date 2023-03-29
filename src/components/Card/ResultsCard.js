@@ -2,14 +2,15 @@ import React, { useState } from "react";
 import { Card, Grid, Typography, CardMedia, CardContent, Button } from "@mui/material";
 import Matched from "./Matched";
 
-export default function ResultsCard({ plant }) {
-  console.log(plant);
-  const [isMatched, setMatched] = useState(false);
-  console.log(isMatched);
+export default function ResultsCard({ plant, unique}) {
+  console.log("key",unique);
 
-  const handleClick = (e) => {
-    console.log(e);
-  }
+  const [isMatched, setMatched] = useState(false);
+  // console.log(isMatched);
+
+  // const handleClick = (e) => {
+  //   console.log(e);
+  // }
 
   const checkName = (plant) => {
     if (plant["Common name"] && plant["Common name"].length > 0) {
@@ -22,7 +23,7 @@ export default function ResultsCard({ plant }) {
 
   return (
   
-      <Card sx={{ width: 270, m: 2}}>
+      <Card key={unique} sx={{ width: 270, m: 2}}>
         <CardMedia
           sx={{ height: 220 }}
           image={plant.Img}
@@ -45,7 +46,6 @@ export default function ResultsCard({ plant }) {
             gutterBottom={true}
             component="div"
           >
-            {/* {plant["Common name"][0]} */}
             {checkName(plant)}
           </Typography>
 

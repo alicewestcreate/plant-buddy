@@ -8,6 +8,13 @@ import image1 from "../Images/cactus-1.jpg";
 import image2 from "../Images/cactus-main.jpg";
 
 
+const generateKey = () => {
+  return `${ new Date().getTime() }`;
+}
+
+console.log(generateKey());
+
+
 const Quiz = () => {
   let [questionIndex, setQuestion] = useState(0);
   const [showQuestion, setShowQuestions] = useState(true);
@@ -98,12 +105,28 @@ const Quiz = () => {
                 storePreference={storePreference}
               />
             )}
+
+{/* {posts.map(post => <Post details={post} key={post.id} />)} */}
+
+
+{/* {showResultsButton && (unique.map(uni => 
+          <Button variant="contained" color="primary"
+            onClick={() => { 
+              navigate("/results", { state: { allProperties, allValues, uni}});
+              sendPreferences();
+            }}
+          >
+            Reveal Your Matches
+          </Button>
+            ))} */}
+
         {showResultsButton && (
           <Button
             variant="contained"
             color="primary"
-            onClick={() => {
-              navigate("/results", { state: { allProperties, allValues}});
+            onClick={() => { 
+              let unique = generateKey()
+              navigate("/results", { state: { allProperties, allValues, unique}});
               sendPreferences();
             }}
           >

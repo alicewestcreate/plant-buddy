@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Card, Typography, Box } from "@mui/material";
-import { flexbox } from '@mui/system';
 import Layout from "../Layout/Layout";
 import { MainHome } from './Matches.styled';
 import { useLocation } from "react-router-dom";
@@ -9,14 +8,18 @@ import fetchData from "../../utils/API";
 import Loading from "./Loading"
 
 
-
 const Results = () => {
+
+  // When Results page is rendered 
+  // Pass through state varibables from previous page. 
   const location = useLocation();
   const properties = location.state?.allProperties;
   const values = location.state?.allValues;
+  const unique = location.state?.unique
 
+
+  //
   const [data, setData] = useState(null);
-
   useEffect(() => {
     const fetchDataAsync = async () => {
       const responseData = await fetchData();
@@ -28,8 +31,13 @@ const Results = () => {
     return <Loading/>;
   }
 
-  const matches = [];
 
+  // ======================//
+  // FILTER EACH ITEM RETURNED IN DATA//
+  // For each item matches, return true.
+  // For each property matched, plus one to prioity points 
+
+  const matches = [];
   console.log("Prop",properties);
   console.log("Valu",values);
 
@@ -71,11 +79,18 @@ const Results = () => {
   const sortedMatches = matches.sort(sortByPriority);
   const slicedResults = sortedMatches.slice(0, 12);
 
-  const resultsArray = slicedResults.map((perResult) =>
-    <ResultsCard plant={perResult} />
-  )
+  // const resultsArray = slicedResults.map((perResult, index) => {
+  //   console.log(`Index of item ${perResult} is ${index}`);
+  //   return <ResultsCard plant={perResult} unique={perResult.id} test="test" />;
+  // });
+  const resultsArray = slicedResults.map((perResult) => {
+    console.log(`Index of item ${perResult} is ${perResult.id}`);
+    return <ResultsCard plant={perResult} unique={perResult.id} />;
+  });
 
   return (
+    <>
+    <div key={unique}></div>
     <Layout>
       <MainHome>
         <Typography variant="h1" component="div" color='text.primary' sx={{ flexGrow: 1 }}>
@@ -86,6 +101,7 @@ const Results = () => {
         </Box>
       </MainHome>
     </Layout>
+    </>
   );
 };
 
