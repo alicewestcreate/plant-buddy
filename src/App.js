@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Route, Routes } from "react-router-dom";
 import Home from './components/pages/Home';
 import Matches from './components/pages/Matches';
@@ -15,6 +15,7 @@ import About from './components/pages/About'
 export function App() {
   // automatically adjusts to the users light or dark mode settings
   const [mode, setMode] = React.useState(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  // useMemo Hook which returns memorized value so that colorMode does not need to rerun everytime it is called. 
   const colorMode = React.useMemo(
     () => ({
       toggleColorMode: () => {
@@ -33,7 +34,6 @@ export function App() {
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={modeTheme}>
         <SplashScreen />
-        {/* <Navbar /> */}
         <Paper>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -43,7 +43,6 @@ export function App() {
             <Route path="/about" element={<About />} />
           </Routes>
         </Paper>
-        {/* <Footer /> */}
       </ThemeProvider>
     </ColorModeContext.Provider>
   );
