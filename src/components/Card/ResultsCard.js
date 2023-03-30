@@ -1,16 +1,14 @@
-
-// Result card, recieves a prop call plant. This is an item from the API. 
-// It the maps the properites from the plant item to the results card. 
+// Result card, recieves a prop call plant. This is an item from the API.
+// It the maps the properites from the plant item to the results card.
 
 import React, { useState } from "react";
 import { Card, Typography, CardMedia, CardContent } from "@mui/material";
 import Matched from "./Matched";
 import PropertiesList from "./PropertiesList";
 
-
 export default function ResultsCard({ plant }) {
   const [isMatched] = useState(false);
-  // For items that do not have a name, return plant. 
+  // For items that do not have a name, return plant.
   const checkName = (plant) => {
     if (plant["Common name"] && plant["Common name"].length > 0) {
       return plant["Common name"][0];
@@ -18,8 +16,6 @@ export default function ResultsCard({ plant }) {
       return "Plant";
     }
   };
-
-
 
   return (
     <Card sx={{ width: 270, m: 2 }}>
@@ -30,7 +26,6 @@ export default function ResultsCard({ plant }) {
         title="Kitchen Plant"
       />
       <CardContent>
-
         <Matched id={plant.id} state={!isMatched} />
 
         <Typography
@@ -49,27 +44,12 @@ export default function ResultsCard({ plant }) {
         >
           {checkName(plant)}
         </Typography>
-{/* 
+
         <Typography variant="body2" color="text.secondary">
-          {"You'll find me in the "}
-          {plant.Family}
-          {" family"}
-        </Typography> */}
-
-        <PropertiesList plant={plant}></PropertiesList>
-
-        {/* <Typography variant="body2" color="text.secondary">
           {"Reason's why you will love me:\n"}
-          {"\nmy"}
-          {plant.Appeal} {"\nI need watering"} {plant.watering}
-          {" family"} */}
-        {/* </Typography> */}
+        </Typography>
+        <PropertiesList plant={plant}></PropertiesList>
       </CardContent>
     </Card>
   );
-
-
-
-
-
 }
