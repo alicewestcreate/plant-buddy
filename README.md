@@ -45,10 +45,10 @@ This web application was built with React and Material UI.
 ### [View Project](insert link to project)
 
 
-![screenshot](add image link to homepage)
-![quiz](add image link to quiz)
-![results](add image link to results)
-![your matches](add image link to your matches)
+- ![screenshot](add image link to homepage)
+- ![quiz](add image link to quiz)
+- ![results](add image link to results)
+- ![your matches](add image link to your matches)
 
 
 ### Future development
