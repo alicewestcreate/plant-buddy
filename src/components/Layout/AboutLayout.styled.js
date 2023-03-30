@@ -6,7 +6,7 @@ import backgroundImage from '../Images/plantsWhiteScreen.jpg';
 export const Main = styled("main")({
     display: "flex",
     flexDirection: "column",
-    minHeight: "100vh",
+    height: "120vh",
     background: `url(${backgroundImage})`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
