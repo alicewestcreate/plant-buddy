@@ -82,7 +82,7 @@ Images
 
 _Tripple A_ development team:
 
-- [Alice West] (https://github.com/alicewestcreate)
-- [Amiker Best] (https://github.com/AmikerB)
-- [Ademola Alashe] (https://github.com/ademolaalashe)
+- [Alice West](https://github.com/alicewestcreate)
+- [Amiker Best](https://github.com/AmikerB)
+- [Ademola Alashe](https://github.com/ademolaalashe)
 
