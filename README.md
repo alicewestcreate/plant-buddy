@@ -42,13 +42,13 @@ This web application was built with React and Material UI.
 
 
 
-### [View Project](insert link to project)
+### [View Project](https://deploy-preview-26--warm-croissant-8d430b.netlify.app/)
 
 
-- ![screenshot](add image link to homepage)
-- ![quiz](add image link to quiz)
-- ![results](add image link to results)
-- ![your matches](add image link to your matches)
+![screenshot](https://github.com/alicewestcreate/plant-buddy/blob/main/public/Images/HomePage.jpg)
+![quiz](https://github.com/alicewestcreate/plant-buddy/blob/main/public/Images/Quiz.jpg)
+![results](https://github.com/alicewestcreate/plant-buddy/blob/main/public/Images/Results.jpg)
+![your matches](https://github.com/alicewestcreate/plant-buddy/blob/main/public/Images/YourMatches.jpg)
 
 
 ### Future development
