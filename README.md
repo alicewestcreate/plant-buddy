@@ -82,7 +82,7 @@ Images
 
 _Tripple A_ development team:
 
-@alicewestcreate Alice West
-@AmikerB Amiker Best
-@ademolaalashe Ademola Alashe
+- @alicewestcreate Alice West
+- @AmikerB Amiker Best
+- @ademolaalashe Ademola Alashe
 
