@@ -34,15 +34,7 @@ const PropertiesList = ({ plant }) => {
   };
 
   return (
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        flexWrap: "",
-        justifyContent: "",
-        alignContent: "",
-      }}
-    >
+    <Box>
 <ListItem>
   <ListItemAvatar><AttractionsIcon /> </ListItemAvatar> 
     <ListItemText primary={`My ${plant.Appeal}`} />
