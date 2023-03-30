@@ -35,18 +35,18 @@ const PropertiesList = ({ plant }) => {
 
   return (
     <Box>
-<ListItem>
-  <ListItemAvatar><AttractionsIcon /> </ListItemAvatar> 
-    <ListItemText primary={`My ${plant.Appeal}`} />
-    </ListItem>
-    <ListItem>
-  <ListItemAvatar><WbSunnyIcon /></ListItemAvatar> 
-    <ListItemText primary={`I enjoy the ${plant.Climat} climate`} />
-    </ListItem>
-    <ListItem>
-    <ListItemAvatar><ShowerIcon /></ListItemAvatar> 
-    <ListItemText primary={`${watering(plant.Watering)}`} />
-    </ListItem>
+      <ListItem>
+        <ListItemAvatar><AttractionsIcon sx={{ color: 'text.secondary' }} /> </ListItemAvatar>
+        <ListItemText primary={`My ${plant.Appeal}`} sx={{ color: 'text.secondary' }} />
+      </ListItem>
+      <ListItem>
+        <ListItemAvatar><WbSunnyIcon sx={{ color: 'text.secondary' }} /></ListItemAvatar>
+        <ListItemText primary={`I enjoy the ${plant.Climat} climate`} sx={{ color: 'text.secondary' }} />
+      </ListItem>
+      <ListItem>
+        <ListItemAvatar><ShowerIcon sx={{ color: 'text.secondary' }} /></ListItemAvatar>
+        <ListItemText primary={`${watering(plant.Watering)}`} sx={{ color: 'text.secondary' }} />
+      </ListItem>
     </Box>
   );
 };
