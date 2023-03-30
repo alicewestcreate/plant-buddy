@@ -24,7 +24,7 @@ export const IconContainer = styled("div")({
 export const ImageContainer = styled("div")({
     width: "200px",
     height: "200px",
-    borderRadius: "5px",
+    borderRadius: "50%",
     overflow: "hidden",
     "& img": {
         width: "100%",
