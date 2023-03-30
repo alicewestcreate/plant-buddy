@@ -5,6 +5,8 @@
 import React, { useState } from "react";
 import { Card, Typography, CardMedia, CardContent } from "@mui/material";
 import Matched from "./Matched";
+import PropertiesList from "./PropertiesList";
+
 
 export default function ResultsCard({ plant }) {
   const [isMatched] = useState(false);
@@ -16,6 +18,8 @@ export default function ResultsCard({ plant }) {
       return "Plant";
     }
   };
+
+
 
   return (
     <Card sx={{ width: 270, m: 2 }}>
@@ -45,19 +49,21 @@ export default function ResultsCard({ plant }) {
         >
           {checkName(plant)}
         </Typography>
-
+{/* 
         <Typography variant="body2" color="text.secondary">
           {"You'll find me in the "}
           {plant.Family}
           {" family"}
-        </Typography>
+        </Typography> */}
 
-        <Typography variant="body2" color="text.secondary">
+        <PropertiesList plant={plant}></PropertiesList>
+
+        {/* <Typography variant="body2" color="text.secondary">
           {"Reason's why you will love me:\n"}
           {"\nmy"}
           {plant.Appeal} {"\nI need watering"} {plant.watering}
-          {" family"}
-        </Typography>
+          {" family"} */}
+        {/* </Typography> */}
       </CardContent>
     </Card>
   );
